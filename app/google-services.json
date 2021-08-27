@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "414163726482",
+    "project_id": "classdeck",
+    "storage_bucket": "classdeck.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:414163726482:android:bc961c90ad1e7ec23ff64b",
+        "android_client_info": {
+          "package_name": "com.classroom.classdeck"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "414163726482-luofk015mli25vo7t9hs2rr4ncvb8rbd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.classroom.classdeck",
+            "certificate_hash": "b8c68feacb36384a58cbe1ff8954de087d15580c"
+          }
+        },
+        {
+          "client_id": "414163726482-pltvsog7e8b8751tu9mf6k7h1lq3dunn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_iSqZy4DfuutdDr6EisVm0zloSfPiJY8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "414163726482-pltvsog7e8b8751tu9mf6k7h1lq3dunn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

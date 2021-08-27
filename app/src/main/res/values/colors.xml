@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="gray">#9E9E9E</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#44BD49</color>
+    <color name="red">#EA3430</color>
+
+
+    <color name="primary_color">#E2F2F4</color>
+    <color name="primary_color_transparent">#9EE2F2F4</color>
+    <color name="primary_color_light">#EAF5F6</color>
+    <color name="dark_primary_color">#CEEDF1</color>
+    <color name="primary_color_variant">#030707</color>
+
+    <color name="splash_bg">#040b14</color>
+    <color name="btn_colors">#1E88E5</color>
+
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true" >#081629</color>
+
+    <color name="heading_text">#1E88E5</color>
+
+    <color name="toggle_black">#000000</color>
+    <color name="toggle_gray">#ACACAC</color>
+
+
+    <color name="fab_color">#EAC16F</color>
+    <color name="fab_text_color">#EAC16F</color>
+
+    <color name="switch_checked">#EAC16F</color>
+    <color name="switch_unchecked">#888888</color>
+
+
+    <color name="helper_icon_color">#000000</color>
+
+
+
+    <color name="text_color">#000000</color>
+
+    <!-- amoled-->
+    <color name="primary_color_amoled">#000000</color>
+    <color name="primary_color_amoled_variant">#000000</color>
+    <color name="colorOnPrimary_amoled">#FFFFFF</color>
+    <color name="secondary_amoled">#F8D01F</color>
+    <color name="colorSecondaryVariant_amoled">#AA8F16</color>
+    <color name="colorOnSecondary_amoled">#000000</color>
+
+    <color name="switchTrack">#F8D01F</color>
+    <color name="switchTrackDisable">#FF3700B3</color>
+    <color name="switchTrackActive">#AA8F16</color>
+    <color name="switchTrackNormal">#AA8F16</color>
+
+
+</resources>
