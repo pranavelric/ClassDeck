@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="headerTextSize">30sp</dimen>
+    <dimen name="newsMoreTextSize">12sp</dimen>
+    <dimen name="loginCardRadius">20dp</dimen>
+    <dimen name="loginViewsMargin">20dp</dimen>
+    <dimen name="grid_expected_size">150dp</dimen>
+    <dimen name="signup_text_margin_top">10dp</dimen>
+    <dimen name="toolbar_height">96dp</dimen>
+
+
+</resources>

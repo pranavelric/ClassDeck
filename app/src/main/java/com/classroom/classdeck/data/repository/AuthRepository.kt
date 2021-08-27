@@ -59,7 +59,7 @@ class AuthRepository @Inject constructor() {
         return authenticatedUserMutableLiveData
     }
 
-    fun createUserInFireStoreIfNotExist(authenticatedUser: User): MutableLiveData<ResponseState<User>> {
+    fun createUserInFireStoreIfNotExist(authenticatedUser: User,isStudent:Boolean): MutableLiveData<ResponseState<User>> {
 
 
         val newUserMutableLiveData: MutableLiveData<ResponseState<User>> = MutableLiveData()
@@ -75,7 +75,7 @@ class AuthRepository @Inject constructor() {
 
 
                         authenticatedUser.isNew = authenticatedUser.isNew
-                        authenticatedUser.isStudent = true
+                        authenticatedUser.isStudent = isStudent
 
                         uidRef.set(authenticatedUser)
                             .addOnCompleteListener { userCreationTask ->

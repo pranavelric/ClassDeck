@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_22sdp"
-        app:boxStrokeColor="@color/primary_color"
+        app:boxStrokeColor="@color/primary_color_amoled"
         app:boxBackgroundColor="@android:color/transparent"
         app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
         app:boxCornerRadiusTopEnd="@dimen/_8sdp"
@@ -94,15 +94,5 @@ android:textColor="@color/black"
 
 
 
-
-    <TextView
-        android:id="@+id/text_signup_phone"
-        style="@style/parent"
-        android:textAlignment="textEnd"
-        android:visibility="gone"
-        android:textStyle="bold"
-        android:textColor="@color/primaryTextColor"
-        android:text="@string/login_signup_hint"
-        android:layout_marginTop="@dimen/loginViewsMargin"/>
 
 </LinearLayout>

@@ -3,7 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_wave_down.xml" value="0.2703125" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_wave_up.xml" value="0.2703125" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/login_button_bk.xml" value="0.2703125" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_select_type.xml" value="0.24010416666666667" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_splash.xml" value="0.25416666666666665" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/layout_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/layout_phone.xml" value="0.25416666666666665" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/menu/btm_bar_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/menu/home_menu.xml" value="0.22291666666666668" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/menu/main_menu.xml" value="0.22291666666666668" />
       </map>
     </option>
   </component>

@@ -1,12 +1,11 @@
-package com.gaming.earningvalley.ui.login
+package com.classroom.classdeck.ui.login.login
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.classroom.classdeck.data.model.User
 import com.classroom.classdeck.data.repository.AuthRepository
-import com.gaming.earningvalley.utils.ResponseState
-import com.google.firebase.auth.AuthCredential
+import com.classroom.classdeck.util.ResponseState
 import com.google.firebase.auth.PhoneAuthCredential
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -26,20 +25,12 @@ class LoginViewModel @Inject constructor(val authRepository: AuthRepository) :
 
 
 
-    fun signInWithGoogle(googleAuthCredential: AuthCredential) {
-        _authenticateUserLiveData = authRepository.firebaseSignInWithGoogle(googleAuthCredential)
-    }
-
-    fun signInWithEmailPass(email: String, pass: String) {
-        _authenticateUserLiveData = authRepository.firebaseSignInWithEmailPass(email, pass)
-    }
-
     fun signInWithPhoneNumber(credential: PhoneAuthCredential) {
         _authenticateUserLiveData = authRepository.firebaseSignInWithPhone(credential)
     }
 
-    fun createUser(authenticatedUser: User) {
-        _createdUserLiveData = authRepository.createUserInFireStoreIfNotExist(authenticatedUser)
+    fun createUser(authenticatedUser: User,isStudent:Boolean) {
+        _createdUserLiveData = authRepository.createUserInFireStoreIfNotExist(authenticatedUser,isStudent)
     }
 
     fun getUser(uid: String) {

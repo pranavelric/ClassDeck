@@ -1,4 +1,4 @@
-package com.gaming.earningvalley.utils
+package com.classroom.classdeck.util
 
 import android.content.Context
 import android.content.SharedPreferences

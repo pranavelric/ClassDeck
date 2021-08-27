@@ -10,6 +10,7 @@ import android.os.Build
 import androidx.lifecycle.LiveData
 
 
+
 class NetworkConnection(application: Application) : LiveData<Boolean>() {
 
 

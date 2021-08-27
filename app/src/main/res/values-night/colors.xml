@@ -38,7 +38,7 @@
 
     <color name="text_color">#FFFFFF</color>
     <!-- amoled-->
-    <color name="primary_color_amoled">#000000</color>
+    <color name="primary_color_amoled">#F8D01F</color>
     <color name="primary_color_amoled_variant">#000000</color>
     <color name="colorOnPrimary_amoled">#FFFFFF</color>
     <color name="secondary_amoled">#F8D01F</color>
@@ -50,4 +50,5 @@
     <color name="switchTrackActive">#AA8F16</color>
     <color name="switchTrackNormal">#AA8F16</color>
 
+    <color name="invertTextColor">#000000</color>
 </resources>

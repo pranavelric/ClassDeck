@@ -1,9 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/my_navgraph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navgraph"
+    app:startDestination="@id/splashFragment">
 
 
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.classroom.classdeck.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
 
 
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+
+            app:popUpTo="@id/my_navgraph"
+            app:popUpToInclusive="true"
+
+            android:id="@+id/action_splashFragment_to_selectTypeFragment"
+            app:destination="@id/selectTypeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.classroom.classdeck.ui.login.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/selectTypeFragment"
+        android:name="com.classroom.classdeck.ui.login.selectType.SelectTypeFragment"
+        android:label="fragment_select_type"
+        tools:layout="@layout/fragment_select_type" >
+        <action
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/my_navgraph"
+            app:popUpToInclusive="true"
+
+            android:id="@+id/action_selectTypeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
 </navigation>

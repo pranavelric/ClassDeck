@@ -6,7 +6,6 @@ import com.classroom.classdeck.data.model.*
 import com.classroom.classdeck.util.Constants
 import com.classroom.classdeck.util.ResponseState
 import com.classroom.classdeck.util.getTodaysDate
-import com.gaming.earningvalley.utils.*
 import com.google.firebase.firestore.*
 import kotlinx.coroutines.tasks.await
 import javax.inject.Inject

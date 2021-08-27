@@ -19,7 +19,7 @@
     <color name="dark_primary_color">#CEEDF1</color>
     <color name="primary_color_variant">#030707</color>
 
-    <color name="splash_bg">#040b14</color>
+    <color name="splash_bg">#2D1E88E5</color>
     <color name="btn_colors">#1E88E5</color>
 
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true" >#081629</color>
@@ -44,7 +44,7 @@
     <color name="text_color">#000000</color>
 
     <!-- amoled-->
-    <color name="primary_color_amoled">#000000</color>
+    <color name="primary_color_amoled">#040b14</color>
     <color name="primary_color_amoled_variant">#000000</color>
     <color name="colorOnPrimary_amoled">#FFFFFF</color>
     <color name="secondary_amoled">#F8D01F</color>
@@ -56,5 +56,7 @@
     <color name="switchTrackActive">#AA8F16</color>
     <color name="switchTrackNormal">#AA8F16</color>
 
+
+    <color name="invertTextColor">#FFFFFF</color>
 
 </resources>

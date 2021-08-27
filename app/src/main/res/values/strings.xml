@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">ClassDeck</string>
+    <string name="app_name">Class Deck</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="login_username_hint">Username</string>
+
+    <string name="login_name_hint">Full Name</string>
+    <string name="login_mobile_number_hint">Phone number</string>
+
+
 </resources>
