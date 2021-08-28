@@ -238,10 +238,10 @@ class HomeFragment : Fragment() {
                             putSerializable(USERS_BUNDLE_OBJ, user)
                         }
 
-//                        findNavController().navigate(
-//                            R.id.action_mainFragment_to_referFragment,
-//                            bundle
-//                        )
+                        findNavController().navigate(
+                            R.id.action_homeFragment_to_dashBoardFragment,
+                            bundle
+                        )
                         return true
                     }
 
