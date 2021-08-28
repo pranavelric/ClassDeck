@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.home.HomeFragment"
     android:background="@color/primary_color"
-    >
+    tools:context=".ui.home.HomeFragment">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -37,8 +36,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/primary_color"
-                    app:layout_collapseMode="parallax"
-                    >
+                    app:layout_collapseMode="parallax">
 
 
                     <com.google.android.material.imageview.ShapeableImageView
@@ -51,25 +49,20 @@
                         android:src="@drawable/smiley_success"
                         app:layout_collapseParallaxMultiplier="0.7"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:shapeAppearanceOverlay="@style/roundedImageView"
-                        />
-
-
-
+                        app:shapeAppearanceOverlay="@style/roundedImageView" />
 
 
                     <androidx.appcompat.widget.Toolbar
                         android:id="@+id/toolbar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
                         android:gravity="center"
+                        android:theme="@style/ThemeOverlay.MaterialComponents.Dark"
+                        app:layout_constraintTop_toTopOf="parent"
                         app:layout_scrollFlags="enterAlways"
                         app:menu="@menu/main_menu"
-                        app:title=""
-                        android:layout_marginTop="@dimen/_8sdp"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:theme="@style/ThemeOverlay.MaterialComponents.Dark"
-                        />
+                        app:title="" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -80,11 +73,10 @@
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fillViewport="true"
-
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:background="@color/primary_color"
 
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
 
 
             >
@@ -96,13 +88,13 @@
                 android:orientation="vertical"
 
                 >
+
                 <LinearLayout
                     android:id="@+id/empty_lay"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:visibility="gone"
-                    >
+                    android:visibility="gone">
 
 
                     <ImageView
@@ -118,11 +110,10 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="@dimen/_8sdp"
                         android:gravity="center"
-                        android:text="No new notifications."
+                        android:text="No class joined yet."
                         android:textColor="@color/text_color"
                         android:textSize="24sp"
                         android:textStyle="bold" />
-
 
                 </LinearLayout>
 
@@ -131,6 +122,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_14sdp"
+                    android:layout_marginBottom="@dimen/_100sdp"
                     android:clipToPadding="false"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     tools:itemCount="3"
@@ -138,9 +130,6 @@
 
 
             </LinearLayout>
-
-
-
 
 
         </androidx.core.widget.NestedScrollView>
@@ -154,15 +143,25 @@
             android:layout_margin="@dimen/_20sdp"
             app:backgroundColor="@color/primary_color_amoled"
             app:cornerRadius="@dimen/_20sdp"
-            app:menu="@menu/btm_bar_menu"
             app:iconTint="@color/invertTextColor"
+            app:menu="@menu/btm_bar_menu"
 
             />
 
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/primary_color_amoled"
+            android:translationY="-80dp"
+            android:visibility="gone" />
+
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

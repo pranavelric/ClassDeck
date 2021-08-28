@@ -4,9 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.profile.ProfileFragment"
+    tools:context=".ui.courseDetails.CourseDetailFragment">
 
-    >
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -74,7 +74,7 @@
 
                 <include
                     android:id="@+id/top_lay"
-                    layout="@layout/profile_card_lay" />
+                    layout="@layout/course_card_lay" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -82,7 +82,7 @@
                     android:orientation="horizontal">
 
                     <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/game_record_card"
+                        android:id="@+id/course_announcement_card"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/_100sdp"
                         android:layout_margin="@dimen/_10sdp"
@@ -117,7 +117,7 @@
                                 android:background="@color/primary_color_amoled"
                                 android:gravity="center"
                                 android:padding="@dimen/_5sdp"
-                                android:text="Game record"
+                                android:text="Announcements"
                                 android:textColor="@color/invertTextColor"
                                 android:textSize="@dimen/_12sdp"
                                 android:textStyle="bold"
@@ -129,7 +129,7 @@
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/customer_care_card"
+                        android:id="@+id/course_assignment_card"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/_100sdp"
                         android:layout_margin="@dimen/_10sdp"
@@ -147,23 +147,23 @@
                             android:background="@color/primary_color_amoled">
 
                             <ImageView
-                                android:id="@+id/customer_care_menu_img"
+                                android:id="@+id/assignment_img"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:scaleType="fitCenter"
                                 android:src="@drawable/smiley_success"
-                                app:layout_constraintBottom_toTopOf="@id/customer_care_text"
+                                app:layout_constraintBottom_toTopOf="@id/assignment_text"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
                             <TextView
-                                android:id="@+id/customer_care_text"
+                                android:id="@+id/assignment_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@color/primary_color_amoled"
                                 android:gravity="center"
                                 android:padding="@dimen/_5sdp"
-                                android:text="Customer care"
+                                android:text="Assignment"
                                 android:textColor="@color/invertTextColor"
                                 android:textSize="@dimen/_12sdp"
                                 android:textStyle="bold"
@@ -182,7 +182,7 @@
                     android:orientation="horizontal">
 
                     <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/transaction_record_card"
+                        android:id="@+id/test_card"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/_100sdp"
                         android:layout_margin="@dimen/_10sdp"
@@ -198,23 +198,23 @@
                             android:background="@color/primary_color_amoled">
 
                             <ImageView
-                                android:id="@+id/transaction_menu_img"
+                                android:id="@+id/test_img"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:scaleType="fitCenter"
                                 android:src="@drawable/smiley_success"
-                                app:layout_constraintBottom_toTopOf="@id/transaction_record_text"
+                                app:layout_constraintBottom_toTopOf="@id/test_text"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
                             <TextView
-                                android:id="@+id/transaction_record_text"
+                                android:id="@+id/test_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@color/primary_color_amoled"
                                 android:gravity="center"
                                 android:padding="@dimen/_5sdp"
-                                android:text="Transaction record"
+                                android:text="Tests"
                                 android:textColor="@color/invertTextColor"
                                 android:textSize="@dimen/_12sdp"
                                 android:textStyle="bold"
@@ -227,7 +227,7 @@
 
 
                     <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/coins_store_card"
+                        android:id="@+id/calendar_card"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/_100sdp"
                         android:layout_margin="@dimen/_10sdp"
@@ -244,23 +244,23 @@
                             >
 
                             <ImageView
-                                android:id="@+id/deposit_menu_img"
+                                android:id="@+id/calendar_img"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:scaleType="fitCenter"
                                 android:src="@drawable/smiley_success"
-                                app:layout_constraintBottom_toTopOf="@id/deposit_text"
+                                app:layout_constraintBottom_toTopOf="@id/calendar_text"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
                             <TextView
-                                android:id="@+id/deposit_text"
+                                android:id="@+id/calendar_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@color/primary_color_amoled"
                                 android:gravity="center"
                                 android:padding="@dimen/_5sdp"
-                                android:text="Coin Store"
+                                android:text="Schedule"
                                 android:textColor="@color/invertTextColor"
                                 android:textSize="@dimen/_12sdp"
                                 android:textStyle="bold"
@@ -274,6 +274,109 @@
 
 
                 </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/join_meeting_card"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        app:rippleColor="@color/primary_color_amoled">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/primary_color_amoled">
+
+                            <ImageView
+                                android:id="@+id/join_meeting_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/smiley_success"
+                                app:layout_constraintBottom_toTopOf="@id/join_meeting_text"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/join_meeting_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/primary_color_amoled"
+                                android:gravity="center"
+                                android:padding="@dimen/_5sdp"
+                                android:text="Join Class"
+                                android:textColor="@color/invertTextColor"
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/call_teacher_card"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:visibility="invisible"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardCornerRadius="@dimen/_10sdp"
+                        app:rippleColor="@color/primary_color_amoled">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/primary_color_amoled"
+                            >
+
+                            <ImageView
+                                android:id="@+id/call_teacher_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/smiley_success"
+                                app:layout_constraintBottom_toTopOf="@id/call_teacher_text"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/call_teacher_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/primary_color_amoled"
+                                android:gravity="center"
+                                android:padding="@dimen/_5sdp"
+                                android:text="Call teacher"
+                                android:textColor="@color/invertTextColor"
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+
+                </LinearLayout>
+
+
 
 
             </LinearLayout>
@@ -299,6 +402,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

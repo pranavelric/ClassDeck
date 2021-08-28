@@ -158,6 +158,12 @@ class ProfileFragment : Fragment() {
         binding.topLay.userEmail.text = user?.email
         binding.topLay.userPhone.text = user?.phoneNumber
 
+        if(user?.isStudent==true)
+            binding.topLay.userRole.text= "Student"
+        else
+            binding.topLay.userRole.text= "Teacher"
+
+
     }
 
     private fun observeData() {

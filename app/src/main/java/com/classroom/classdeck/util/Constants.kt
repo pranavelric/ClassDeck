@@ -24,12 +24,16 @@ object Constants {
 
 
     const val USERS_BUNDLE_OBJ = "USER_BUNDLE_OBJ"
+    const val COURSE_BUNDLE_OBJ = "COURSE_BUNDLE_OBJ"
 
     //Users Info
     const val USERNAME = "USERNAME"
     const val USER_EMAIL = "USEREMAIL"
     const val USER_PASS = "USER_PASS"
     const val USER_PHONE_NUMBER = "USER_PHONE"
+
+    // course
+    const  val COURSE: String= "COURSE"
 
 
     // Classroom quiz

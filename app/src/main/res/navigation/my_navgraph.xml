@@ -108,6 +108,24 @@
 
             android:id="@+id/action_homeFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+
+            android:id="@+id/action_homeFragment_to_courseDetailFragment"
+            app:destination="@id/courseDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
@@ -140,4 +158,14 @@
         android:name="com.classroom.classdeck.ui.profile.ProfileFragment"
         android:label="profile_fragment"
         tools:layout="@layout/profile_fragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.classroom.classdeck.ui.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/courseDetailFragment"
+        android:name="com.classroom.classdeck.ui.courseDetails.CourseDetailFragment"
+        android:label="course_detail_fragment"
+        tools:layout="@layout/course_detail_fragment" />
 </navigation>

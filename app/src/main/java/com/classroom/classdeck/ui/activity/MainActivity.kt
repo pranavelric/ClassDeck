@@ -12,11 +12,7 @@ import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
 import com.classroom.classdeck.R
 import com.classroom.classdeck.databinding.ActivityMainBinding
-import com.classroom.classdeck.util.NetworkConnection
-import com.classroom.classdeck.util.NetworkHelper
-import com.classroom.classdeck.util.setFullScreenForNotch
-import com.classroom.classdeck.util.setFullScreenWithBtmNav
-import com.classroom.classdeck.util.MySharedPrefrences
+import com.classroom.classdeck.util.*
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.firebase.auth.FirebaseAuth
 import com.thecode.aestheticdialogs.*
@@ -25,9 +21,9 @@ import javax.inject.Inject
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-
-
-
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 
 @AndroidEntryPoint
@@ -134,6 +130,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+
     override fun onSupportNavigateUp(): Boolean {
         return NavigationUI.navigateUp(navController, null)
     }
@@ -176,9 +173,25 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+    private var doubleBackToExitPressedOnce = false
+    override fun onBackPressed() {
+        if (navController.currentDestination?.id == R.id.homeFragment) {
+            if (doubleBackToExitPressedOnce) {
+                super.onBackPressed()
+                return
+            }
 
+            this.doubleBackToExitPressedOnce = true
+            this.toast("Please click BACK again to exit")
 
+            GlobalScope.launch {
+                delay(2000)
+                doubleBackToExitPressedOnce = false
+            }
 
-
+        } else {
+            super.onBackPressed()
+        }
+    }
 
 }

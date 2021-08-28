@@ -41,7 +41,7 @@
         app:layout_constraintEnd_toEndOf="parent"
        app:layout_constraintBottom_toBottomOf="parent"
         android:indeterminate="true"
-        android:indeterminateTint="@color/black"
+        android:indeterminateTint="@color/primary_color_amoled"
         android:layout_marginBottom="@dimen/_16sdp"
         android:visibility="gone"
         />

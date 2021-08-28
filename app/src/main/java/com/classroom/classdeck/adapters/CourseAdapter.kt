@@ -25,10 +25,10 @@ class CourseAdapter :
 
             binding.courseCodeLabel.setText(cp?.courseCode)
             binding.courseNameText.setText(cp?.courseName)
-            binding.joinedText.setText(cp?.studentCount.toString())
+            //binding.joinedText.setText(cp?.studentCount.toString()+"0")
             binding.createdByText.setText("By " + cp?.createdBy)
 
-            binding.rootLayoutCourse.setBackgroundColor(getRandomColorCode())
+        //    binding.rootLayoutCourse.setBackgroundColor(getRandomColorCode())
 
             binding.rootLayoutCourse.setOnClickListener {
 
