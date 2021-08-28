@@ -177,10 +177,41 @@
         android:id="@+id/courseDetailFragment"
         android:name="com.classroom.classdeck.ui.courseDetails.CourseDetailFragment"
         android:label="course_detail_fragment"
-        tools:layout="@layout/course_detail_fragment" />
+        tools:layout="@layout/course_detail_fragment" >
+        <action
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+
+
+            android:id="@+id/action_courseDetailFragment_to_announcementsFragment"
+            app:destination="@id/announcementsFragment" />
+        <action
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+
+
+            android:id="@+id/action_courseDetailFragment_to_assignmentFragment"
+            app:destination="@id/assignmentFragment" />
+    </fragment>
     <fragment
         android:id="@+id/dashBoardFragment"
         android:name="com.classroom.classdeck.ui.dashBorad.DashBoardFragment"
         android:label="dash_board_fragment"
         tools:layout="@layout/dash_board_fragment" />
+    <fragment
+        android:id="@+id/announcementsFragment"
+        android:name="com.classroom.classdeck.ui.courseDetails.announcements.AnnouncementsFragment"
+        android:label="fragment_announcements"
+        tools:layout="@layout/fragment_announcements" />
+    <fragment
+        android:id="@+id/assignmentFragment"
+        android:name="com.classroom.classdeck.ui.courseDetails.assigments.AssignmentFragment"
+        android:label="fragment_assignment"
+        tools:layout="@layout/fragment_assignment" />
 </navigation>

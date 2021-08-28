@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.classroom.classdeck.R
 import com.classroom.classdeck.data.model.Course
 import com.classroom.classdeck.data.model.User
@@ -26,11 +27,14 @@ class CourseDetailFragment : Fragment() {
     }
 
     var course: Course? = null;
+    var user: User? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         arguments?.let {
             course = (it.getSerializable(Constants.COURSE_BUNDLE_OBJ) as Course?)
+
+            user = (it.getSerializable(Constants.USERS_BUNDLE_OBJ) as User?)
         }
 
 
@@ -76,6 +80,35 @@ class CourseDetailFragment : Fragment() {
     }
 
     private fun setMyClickListeners() {
+
+        binding.courseAnnouncementCard.setOnClickListener {
+            val bundle = Bundle().apply {
+                putSerializable(Constants.COURSE_BUNDLE_OBJ, course)
+                putSerializable(Constants.USERS_BUNDLE_OBJ, user)
+            }
+
+            findNavController().navigate(
+                R.id.action_courseDetailFragment_to_announcementsFragment,
+                bundle
+            )
+
+
+        }
+
+        binding.courseAssignmentCard.setOnClickListener {
+            val bundle = Bundle().apply {
+                putSerializable(Constants.COURSE_BUNDLE_OBJ, course)
+                putSerializable(Constants.USERS_BUNDLE_OBJ, user)
+            }
+
+            findNavController().navigate(
+                R.id.action_courseDetailFragment_to_assignmentFragment,
+                bundle
+            )
+
+
+        }
+
 
     }
 

@@ -5,6 +5,7 @@
   <item android:id="@+id/action_profile" android:title="Profile"/>
     <item android:id="@+id/action_notification" android:title="Notifications" app:showAsAction="always"
         android:icon="@drawable/ic_baseline_notifications_24" android:iconTint="@color/primary_color_amoled"
+      android:visible="false"
         />
 
   <item android:id="@+id/action_add_class" android:title="Create Course"  />

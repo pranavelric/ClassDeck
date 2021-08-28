@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/notif_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_4sdp"
+    android:layout_marginTop="@dimen/_3sdp"
+    android:layout_marginEnd="@dimen/_4sdp"
+    android:layout_marginBottom="@dimen/_1sdp"
+    android:clickable="true"
+    android:elevation="@dimen/_1sdp"
+    android:focusable="true"
+    app:cardCornerRadius="@dimen/_1sdp"
+    app:rippleColor="@color/primary_color">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2F73CAED"
+        android:padding="0dp"
+
+        android:paddingEnd="@dimen/_16sdp"
+
+        >
+
+
+        <ImageView
+            android:id="@+id/earning_img_label"
+            android:layout_width="5dp"
+            android:layout_height="0dp"
+            android:src="@color/primary_color_amoled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/notif_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="Title"
+            android:textColor="@color/heading_text"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/earning_img_label"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/notfi_msg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="Message"
+            android:textColor="@color/primary_color_variant"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/earning_img_label"
+            app:layout_constraintTop_toBottomOf="@id/notif_title" />
+
+
+        <TextView
+            android:id="@+id/notif_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:text="Time"
+            android:textColor="@color/primary_color_variant"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/notfi_msg" />
+
+
+        <TextView
+            android:id="@+id/notif_date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:text="June 10, 2021"
+            android:textColor="@color/primary_color_variant"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/notif_time"
+            app:layout_constraintTop_toBottomOf="@id/notfi_msg" />
+
+
+        <TextView
+            android:id="@+id/submit_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:text="Submit to: temp@gmail.com"
+            android:textColor="@color/primary_color_variant"
+            android:textSize="10sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/earning_img_label"
+            app:layout_constraintTop_toBottomOf="@id/notfi_msg" />
+
+
+        <TextView
+            android:id="@+id/coursecode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:text="CS101"
+            android:textColor="@color/primary_color_variant"
+            android:textSize="8sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

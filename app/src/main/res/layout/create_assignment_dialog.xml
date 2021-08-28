@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/loan_apply_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="0dp"
+    android:layout_marginTop="0dp"
+    android:layout_marginEnd="0dp"
+    android:layout_marginBottom="0dp"
+    android:clickable="true"
+    android:elevation="0dp"
+    android:focusable="true"
+    app:cardCornerRadius="@dimen/_1sdp"
+    app:rippleColor="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0D040B14"
+
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        android:paddingBottom="@dimen/_16sdp">
+
+
+
+        <TextView
+            android:id="@+id/join_class_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="New Assignment"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/text_color"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <EditText
+            android:id="@+id/editTextAssignmentTitle"
+            style="@style/modifiedEditText"
+            android:layout_marginTop="@dimen/_30sdp"
+            app:layout_constraintTop_toBottomOf="@id/join_class_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Title"
+            android:inputType="text"
+            android:textSize="18sp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            android:maxLines="1" />
+
+        <EditText
+            android:id="@+id/editTextAssignmentMessage"
+            style="@style/modifiedEditText"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            app:layout_constraintTop_toBottomOf="@id/editTextAssignmentTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Assignment message"
+            android:inputType="text"
+            android:textSize="18sp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:maxLines="10"
+
+            />
+
+
+
+        <LinearLayout
+            android:layout_width="@dimen/_300sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextAssignmentMessage"
+
+            >
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_19sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:textSize="@dimen/_10sdp"
+                app:backgroundTint="@color/red"
+                app:cornerRadius="@dimen/_4sdp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+           />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/create_assignment_btn"
+                android:layout_width="0dp"
+                android:backgroundTint="@color/primary_color_amoled"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_19sdp"
+                android:layout_weight="1"
+                android:text="Create"
+                android:textColor="@color/invertTextColor"
+                android:textSize="@dimen/_10sdp"
+                app:cornerRadius="@dimen/_4sdp"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

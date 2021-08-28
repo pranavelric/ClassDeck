@@ -277,6 +277,7 @@ class HomeFragment : Fragment() {
 
             val bundle = Bundle().apply {
                 putSerializable(COURSE_BUNDLE_OBJ, course)
+                putSerializable(USERS_BUNDLE_OBJ,user)
             }
             findNavController().navigate(R.id.action_homeFragment_to_courseDetailFragment, bundle)
 
