@@ -3,15 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_baseline_dashboard_24.xml" value="0.2546875" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.2546875" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2546875" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_wave_down.xml" value="0.2703125" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_wave_up.xml" value="0.2703125" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/login_button_bk.xml" value="0.2703125" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/cards_item.xml" value="0.22395833333333334" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/course_card.xml" value="0.4" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_login.xml" value="0.25416666666666665" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_select_type.xml" value="0.24010416666666667" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_splash.xml" value="0.25416666666666665" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/home_fragment.xml" value="0.22395833333333334" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/layout_login.xml" value="0.25416666666666665" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/layout_phone.xml" value="0.25416666666666665" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/layout_register.xml" value="0.4" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/profile_card_lay.xml" value="0.264" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/profile_fragment.xml" value="0.23854166666666668" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/registration_fragment.xml" value="0.2" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/menu/btm_bar_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/menu/home_menu.xml" value="0.22291666666666668" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/menu/main_menu.xml" value="0.22291666666666668" />

@@ -88,7 +88,7 @@ class SplashFragment : Fragment() {
         }
         CoroutinesHelper.delayWithMain(2000L) {
             binding.progressBar.gone()
-          //  findNavController().navigate(R.id.action_splashFragment_to_mainFragment, bundle)
+            findNavController().navigate(R.id.action_splashFragment_to_homeFragment, bundle)
         }
     }
 

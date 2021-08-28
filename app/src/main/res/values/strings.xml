@@ -6,6 +6,10 @@
 
     <string name="login_name_hint">Full Name</string>
     <string name="login_mobile_number_hint">Phone number</string>
+    <string name="login_signup_hint">Don\'t have an account? Register here.</string>
+    <string name="login_email_hint">Enter your email</string>
+    <string name="login_password_hint">password</string>
+    <string name="login_hint">Already have an account? Sign-In here.</string>
 
 
 </resources>

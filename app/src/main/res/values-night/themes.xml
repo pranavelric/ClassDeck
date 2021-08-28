@@ -16,7 +16,7 @@
         <item name="android:windowContentTransitions">true</item>
         <item name="android:windowIsTranslucent">true</item>
 
-        <item name="android:navigationBarColor">@color/primary_color</item>
+        <item name="android:navigationBarColor">@color/primary_color_amoled</item>
 
     </style>
 
@@ -73,7 +73,7 @@
 
     <style name="modifiedEditText" parent="parent">
         <item name="android:textSize">@dimen/newsMoreTextSize</item>
-        <item name="android:backgroundTint">@color/invertTextColor</item>
+        <item name="android:backgroundTint">@color/primary_color_amoled</item>
     </style>
 
     <style name="viewParent">

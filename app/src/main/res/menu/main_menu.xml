@@ -2,16 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-<!--    <item android:id="@+id/action_refer" android:title="Refer a friend"-->
-<!--        android:icon="@drawable/ic_baseline_account_balance_wallet_24" android:iconTint="@color/black"/>-->
-<!--    <item android:id="@+id/action_profile" android:title="Profile"/>-->
-<!--    <item android:id="@+id/action_notification" android:title="Notifications" app:showAsAction="always"-->
-<!--        android:icon="@drawable/ic_baseline_notifications_24" android:iconTint="@color/white"-->
-<!--        />-->
+  <item android:id="@+id/action_profile" android:title="Profile"/>
+    <item android:id="@+id/action_notification" android:title="Notifications" app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_notifications_24" android:iconTint="@color/white"
+        />
 
-<!--    <item android:id="@+id/action_share" android:title="Share" android:visible="false"/>-->
-<!--    <item android:id="@+id/action_tnc" android:title="Terms and Conditions" android:visible="false"/>-->
-<!--    <item android:id="@+id/action_logout" android:title="Logout"/>-->
+    <item android:id="@+id/action_share" android:title="Share" android:visible="false"/>
+    <item android:id="@+id/action_logout" android:title="Logout"/>
 
 
 </menu>

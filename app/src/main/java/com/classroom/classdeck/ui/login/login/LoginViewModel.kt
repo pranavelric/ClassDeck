@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import com.classroom.classdeck.data.model.User
 import com.classroom.classdeck.data.repository.AuthRepository
 import com.classroom.classdeck.util.ResponseState
+import com.google.firebase.auth.AuthCredential
 import com.google.firebase.auth.PhoneAuthCredential
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -42,6 +43,17 @@ class LoginViewModel @Inject constructor(val authRepository: AuthRepository) :
         authRepository.updateUserIsNew(id,b)
 
     }
+
+
+
+    fun signInWithGoogle(googleAuthCredential: AuthCredential) {
+        _authenticateUserLiveData = authRepository.firebaseSignInWithGoogle(googleAuthCredential)
+    }
+
+    fun signInWithEmailPass(email: String, pass: String) {
+        _authenticateUserLiveData = authRepository.firebaseSignInWithEmailPass(email, pass)
+    }
+
 
 
 }

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.login.login.LoginFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.register.RegistrationFragment"
     android:background="@color/primary_color"
     >
+
 
     <ImageView
         android:id="@+id/wave_up"
@@ -22,34 +23,10 @@
         android:background="@drawable/ic_wave_down"
         app:layout_constraintBottom_toBottomOf="parent" />
 
-
-
-
     <include
-
-        android:id="@+id/layout_login"
-        layout="@layout/layout_login"
-       />
-
-
-
-    <include
-
-        android:id="@+id/layout_phone"
-        layout="@layout/layout_phone"
-        android:visibility="gone"
+        android:id="@+id/layout_register"
+        layout="@layout/layout_register"
         />
-
-    <include
-        android:id="@+id/layout_otp"
-        layout="@layout/layout_otp"
-        android:visibility="gone" />
-
-
-
-
-
-
 
 
     <ProgressBar
@@ -61,6 +38,7 @@
         android:indeterminateTint="@color/black"
         android:visibility="gone"
         android:translationY="30dp"
+        app:layout_constraintTop_toBottomOf="@id/layout_register"
         app:layout_constraintBottom_toTopOf="@id/wave_down"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

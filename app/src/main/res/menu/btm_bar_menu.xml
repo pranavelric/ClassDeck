@@ -3,21 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-<!--    <item android:id="@+id/action_home" android:title="Home"-->
-<!--        android:icon="@drawable/ic_baseline_home_24" android:iconTint="@color/black"-->
-<!--        android:tooltipText="Home"-->
+    <item android:id="@+id/action_home" android:title="Home"
+        android:icon="@drawable/ic_baseline_home_24" android:iconTint="@color/black"
+        android:tooltipText="Home"
 
-<!--        />-->
+        />
 
-<!--    <item android:id="@+id/action_refer" android:title="Referrals"-->
-<!--        android:icon="@drawable/ic_baseline_group_24" android:iconTint="@color/black"-->
-<!--        android:tooltipText="Invite and Earn"-->
-<!--        />-->
+    <item android:id="@+id/action_dashboard" android:title="DashBoard"
+        android:icon="@drawable/ic_baseline_dashboard_24" android:iconTint="@color/black"
+        android:tooltipText="Invite and Earn"
+        />
 
-<!--    <item android:id="@+id/action_profile" android:title="Profile"-->
-<!--        android:icon="@drawable/ic_baseline_person_24"-->
-<!--        android:tooltipText="Profile"-->
-<!--        />-->
+    <item android:id="@+id/action_profile" android:title="Profile"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:tooltipText="Profile"
+        />
 
 
 

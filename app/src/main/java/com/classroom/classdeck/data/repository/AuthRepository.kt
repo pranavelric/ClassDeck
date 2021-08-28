@@ -176,5 +176,106 @@ class AuthRepository @Inject constructor() {
         }
     }
 
+    // Sign in using google
+    fun firebaseSignInWithGoogle(googleAuthCredential: AuthCredential): MutableLiveData<ResponseState<User>> {
+        val authenticatedUserMutableLiveData: MutableLiveData<ResponseState<User>> =
+            MutableLiveData()
+        firebaseAuth.signInWithCredential(googleAuthCredential).addOnCompleteListener { authTask ->
+            if (authTask.isSuccessful) {
+                var isNewUser = authTask.result?.additionalUserInfo?.isNewUser
+                val firebaseUser: FirebaseUser? = firebaseAuth.currentUser
+                if (firebaseUser != null) {
+                    val uid = firebaseUser.uid
+                    val name = firebaseUser.displayName
+                    val email = firebaseUser.email
+                    val phoneNumber = firebaseUser.phoneNumber
+                    val profilePic = firebaseUser.photoUrl?.toString()
+                    val user = User(uid = uid, name = name, email = email,phoneNumber = phoneNumber,profilePic)
+                    user.isNew = isNewUser
+                    authenticatedUserMutableLiveData.value = ResponseState.Success(user)
+
+                }
+
+
+            } else {
+
+                authenticatedUserMutableLiveData.value = authTask.exception?.message?.let {
+                    ResponseState.Error(
+                        it
+                    )
+                }
+
+            }
+
+
+        }
+        return authenticatedUserMutableLiveData
+    }
+
+    fun firebaseSignInWithEmailPass(
+        email: String,
+        pass: String
+    ): MutableLiveData<ResponseState<User>> {
+        val authenticatedUserMutableLiveData: MutableLiveData<ResponseState<User>> =
+            MutableLiveData()
+        firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener { authTask ->
+
+            if (authTask.isSuccessful) {
+                val isNewUser = authTask.result?.additionalUserInfo?.isNewUser
+                val firebaseUser: FirebaseUser? = firebaseAuth.currentUser
+                if (firebaseUser != null) {
+                    val uid = firebaseUser.uid
+                    val name = firebaseUser.displayName
+                    val email = firebaseUser.email
+                    val phoneNumber = firebaseUser.phoneNumber
+                    val profilePic = firebaseUser.photoUrl?.toString()
+                    val user = User(uid = uid, name = name, email = email,phoneNumber = phoneNumber,profilePic)
+                    user.isNew = isNewUser
+                    authenticatedUserMutableLiveData.value = ResponseState.Success(user)
+                }
+            } else {
+                authenticatedUserMutableLiveData.value =
+                    authTask.exception?.message?.let { ResponseState.Error(it) }
+
+            }
+
+        }
+
+        return authenticatedUserMutableLiveData
+    }
+
+    // register
+    fun firebaseRegisterUserWithEmailPass(
+        username:String,
+        email: String,
+        pass: String,
+        mobile: String
+    ): MutableLiveData<ResponseState<User>> {
+        val authenticatedUserMutableLiveData: MutableLiveData<ResponseState<User>> =
+            MutableLiveData()
+        firebaseAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener { authTask ->
+
+            if (authTask.isSuccessful) {
+                val isNewUser = authTask.result?.additionalUserInfo?.isNewUser
+                val firebaseUser: FirebaseUser? = firebaseAuth.currentUser
+                if (firebaseUser != null) {
+                    val uid = firebaseUser.uid
+                    val name = username
+                    val email = email
+                    val phoneNumber = mobile
+                    val profilePic = firebaseUser.photoUrl?.toString()
+                    val user = User(uid = uid, name = name, email = email,phoneNumber = phoneNumber,profilePic)
+                    user.isNew = isNewUser
+                    authenticatedUserMutableLiveData.value = ResponseState.Success(user)
+                }
+            } else {
+                authenticatedUserMutableLiveData.value =
+                    authTask.exception?.message?.let { ResponseState.Error(it) }
+            }
+        }
+        return authenticatedUserMutableLiveData
+    }
+
+
 
 }

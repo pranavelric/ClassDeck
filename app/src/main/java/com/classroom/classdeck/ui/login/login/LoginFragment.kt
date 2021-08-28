@@ -1,5 +1,6 @@
 package com.classroom.classdeck.ui.login.login
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,6 +18,9 @@ import com.google.firebase.FirebaseTooManyRequestsException
 import com.google.firebase.auth.*
 import dagger.hilt.android.AndroidEntryPoint
 import com.classroom.classdeck.R
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.android.gms.common.api.ApiException
 import java.util.concurrent.TimeUnit
 
 @AndroidEntryPoint
@@ -26,6 +30,9 @@ class LoginFragment : Fragment() {
     private lateinit var binding: FragmentLoginBinding
     private val loginViewModel: LoginViewModel by lazy {
         ViewModelProvider(this).get(LoginViewModel::class.java)
+    }
+    companion object {
+        const val RC_SIGN_IN = 121
     }
 
 
@@ -58,67 +65,120 @@ class LoginFragment : Fragment() {
     private fun setClickListeners() {
 
 
-        binding.layoutPhone.cirPhoneLoginButton.setOnClickListener {
-            if (binding.layoutPhone.editTextPhone.text.isNullOrBlank()) {
-                binding.layoutPhone.editTextPhone.error = "Please enter your phone number"
+
+        binding.layoutLogin.cirLoginButton.setOnClickListener {
+            if (binding.layoutLogin.editTextEmail.text.isNullOrBlank()) {
+                binding.layoutLogin.editTextEmail.error = "Please enter an email."
+            } else if (binding.layoutLogin.editTextPassword.text.isNullOrBlank()) {
+                binding.layoutLogin.editTextPassword.error = "Please enter password."
             } else {
-                signInUsingPhoneNumber(binding.layoutPhone.editTextPhone.text.toString())
-                binding.layoutPhone.root.gone()
-                binding.layoutOtp.root.visible()
+                signInUsingEmailPassword(
+                    binding.layoutLogin.editTextEmail.text.toString(),
+                    binding.layoutLogin.editTextPassword.text.toString()
+                )
             }
+
         }
+
+        binding.layoutLogin.googleSignInButton.setOnClickListener {
+            signInUsingGoolge()
+        }
+
+        binding.layoutLogin.textSignup.setOnClickListener {
+            goToRegister()
+        }
+
+
+//        binding.layoutPhone.cirPhoneLoginButton.setOnClickListener {
+//            if (binding.layoutPhone.editTextPhone.text.isNullOrBlank()) {
+//                binding.layoutPhone.editTextPhone.error = "Please enter your phone number"
+//            } else {
+//                signInUsingPhoneNumber(binding.layoutPhone.editTextPhone.text.toString())
+//                binding.layoutPhone.root.gone()
+//                binding.layoutOtp.root.visible()
+//            }
+//        }
 
 
     }
 
 
-    private fun signInUsingPhoneNumber(phoneNumber: String) {
+//    private fun signInUsingPhoneNumber(phoneNumber: String) {
+//
+//        binding.layoutOtp.phonenumberText.text = "+91-${phoneNumber}"
+//
+//        val callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+//            override fun onVerificationCompleted(credential: PhoneAuthCredential) {
+//                signInWithPhoneAuthCredential(credential)
+//            }
+//
+//            override fun onVerificationFailed(e: FirebaseException) {
+//                if (e is FirebaseAuthInvalidCredentialsException) {
+//                    context?.toast_long("Invalid request")
+//                } else if (e is FirebaseTooManyRequestsException) {
+//                    context?.toast_long("SMS quota for project has been exceeded")
+//                }
+//            }
+//
+//            override fun onCodeSent(
+//                verificationId: String,
+//                token: PhoneAuthProvider.ForceResendingToken
+//            ) {
+//                super.onCodeSent(verificationId, token)
+//                // Save verification ID and resending token so we can use them later
+//                val storedVerificationId = verificationId
+//                val resendToken = token
+//                binding.layoutOtp.continueOtp.setOnClickListener {
+//                    val code = binding.layoutOtp.pinView.text.toString()
+//                    val credential = PhoneAuthProvider.getCredential(verificationId!!, code)
+//                    signInWithPhoneAuthCredential(credential)
+//                }
+//            }
+//        }
+//        val auth = FirebaseAuth.getInstance()
+//        auth.useAppLanguage()
+//        val options = PhoneAuthOptions.newBuilder(auth)
+//            .setPhoneNumber("+91$phoneNumber")       // Phone number to verify
+//            .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
+//            .setActivity(activity as MainActivity)                 // Activity (for callback binding)
+//            .setCallbacks(callbacks)          // OnVerificationStateChangedCallbacks
+//            .build()
+//        PhoneAuthProvider.verifyPhoneNumber(options)
+//    }
+//
+//    private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
+//
+//        binding.progressBar.visible()
+//        loginViewModel.signInWithPhoneNumber(credential)
+//        loginViewModel.authenticateUserLiveData.observe(viewLifecycleOwner, { authenticatedUser ->
+//            when (authenticatedUser) {
+//                is ResponseState.Error -> {
+//                    binding.progressBar.gone()
+//                    authenticatedUser.message?.let { context?.toast(it) }
+//                }
+//                is ResponseState.Success -> {
+//                    binding.progressBar.gone()
+//                    if (authenticatedUser.data != null)
+//                        if (authenticatedUser.data.isNew == true) {
+//                            createNewUser(authenticatedUser.data)
+//                        } else {
+//                            updateUserIsNew(authenticatedUser.data, false)
+//                            goToMainFragment(authenticatedUser.data)
+//                        }
+//                }
+//                is ResponseState.Loading -> {
+//                }
+//            }
+//        })
+//
+//    }
+//
 
-        binding.layoutOtp.phonenumberText.text = "+91-${phoneNumber}"
 
-        val callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-            override fun onVerificationCompleted(credential: PhoneAuthCredential) {
-                signInWithPhoneAuthCredential(credential)
-            }
 
-            override fun onVerificationFailed(e: FirebaseException) {
-                if (e is FirebaseAuthInvalidCredentialsException) {
-                    context?.toast_long("Invalid request")
-                } else if (e is FirebaseTooManyRequestsException) {
-                    context?.toast_long("SMS quota for project has been exceeded")
-                }
-            }
-
-            override fun onCodeSent(
-                verificationId: String,
-                token: PhoneAuthProvider.ForceResendingToken
-            ) {
-                super.onCodeSent(verificationId, token)
-                // Save verification ID and resending token so we can use them later
-                val storedVerificationId = verificationId
-                val resendToken = token
-                binding.layoutOtp.continueOtp.setOnClickListener {
-                    val code = binding.layoutOtp.pinView.text.toString()
-                    val credential = PhoneAuthProvider.getCredential(verificationId!!, code)
-                    signInWithPhoneAuthCredential(credential)
-                }
-            }
-        }
-        val auth = FirebaseAuth.getInstance()
-        auth.useAppLanguage()
-        val options = PhoneAuthOptions.newBuilder(auth)
-            .setPhoneNumber("+91$phoneNumber")       // Phone number to verify
-            .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
-            .setActivity(activity as MainActivity)                 // Activity (for callback binding)
-            .setCallbacks(callbacks)          // OnVerificationStateChangedCallbacks
-            .build()
-        PhoneAuthProvider.verifyPhoneNumber(options)
-    }
-
-    private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
-
+    private fun signInUsingEmailPassword(email: String, password: String) {
         binding.progressBar.visible()
-        loginViewModel.signInWithPhoneNumber(credential)
+        loginViewModel.signInWithEmailPass(email, password)
         loginViewModel.authenticateUserLiveData.observe(viewLifecycleOwner, { authenticatedUser ->
             when (authenticatedUser) {
                 is ResponseState.Error -> {
@@ -139,8 +199,103 @@ class LoginFragment : Fragment() {
                 }
             }
         })
+    }
+
+    private fun signInUsingGoolge() {
+        val signInGoogleIntent = (activity as MainActivity).googleSignInClient.signInIntent
+        startActivityForResult(signInGoogleIntent, RC_SIGN_IN)
+    }
+
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == RC_SIGN_IN) {
+            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
+            try {
+                // Google Sign In was successful, authenticate with Firebase
+                val account = task.getResult(ApiException::class.java)!!
+
+                if (account != null) {
+                    getGoogleAuthCredential(account)
+                }
+
+            } catch (e: ApiException) {
+                // Google Sign In failed, update UI appropriately
+                context?.toast("Google sign in fialed")
+
+            }
+        }
+    }
+
+    private fun getGoogleAuthCredential(account: GoogleSignInAccount) {
+        binding.progressBar.visible()
+        val googleTokeId = account.idToken
+        val googleAuthCredential = GoogleAuthProvider.getCredential(googleTokeId, null)
+        signInWithGoogleAuthCredential(googleAuthCredential)
+    }
+
+    private fun signInWithGoogleAuthCredential(googleAuthCredential: AuthCredential) {
+
+        loginViewModel.signInWithGoogle(googleAuthCredential)
+        loginViewModel.authenticateUserLiveData.observe(viewLifecycleOwner, { authenticatedUser ->
+            when (authenticatedUser) {
+                is ResponseState.Error -> {
+                    authenticatedUser.message?.let { context?.toast(it) }
+                }
+                is ResponseState.Success -> {
+                    if (authenticatedUser.data != null)
+                        if (authenticatedUser.data!!.isNew == true) {
+                            createNewUser(authenticatedUser.data)
+                        } else {
+                            updateUserIsNew(authenticatedUser.data, false)
+                            goToMainFragment(authenticatedUser.data)
+                        }
+                }
+                is ResponseState.Loading -> {
+                }
+            }
+        })
 
     }
+
+
+
+
+
+    private fun goToRegister() {
+
+        val bundle = Bundle().apply {
+            putSerializable(USERS_BUNDLE_OBJ, userType)
+        }
+
+
+        findNavController().navigate(R.id.action_loginFragment_to_registrationFragment,bundle)
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     private fun updateUserIsNew(b1: User, b: Boolean) {
         loginViewModel.updateUserIsNew(b1, b)
@@ -193,7 +348,16 @@ class LoginFragment : Fragment() {
                         putSerializable(USERS_BUNDLE_OBJ, userTask.data!!)
                     }
 
-                    //  findNavController().navigate(R.id.action_loginFragment_to_mainFragment, bundle)
+
+
+                    if(userTask.data?.isStudent==true){
+                        context?.toast("This is a student's id")
+                    }else{
+                        context?.toast("This is a teacher's id")
+                    }
+
+
+                    findNavController().navigate(R.id.action_loginFragment_to_homeFragment, bundle)
 
                 }
                 is ResponseState.Error -> {

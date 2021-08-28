@@ -17,10 +17,17 @@ import com.classroom.classdeck.util.NetworkHelper
 import com.classroom.classdeck.util.setFullScreenForNotch
 import com.classroom.classdeck.util.setFullScreenWithBtmNav
 import com.classroom.classdeck.util.MySharedPrefrences
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.firebase.auth.FirebaseAuth
 import com.thecode.aestheticdialogs.*
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+
+
+
 
 
 @AndroidEntryPoint
@@ -44,6 +51,8 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var dialog: AestheticDialog.Builder
 
+    lateinit var googleSignInClient:GoogleSignInClient
+
     private val permList: Array<String> = arrayOf(READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE)
     lateinit var firebaseAuth: FirebaseAuth
     companion object {
@@ -58,6 +67,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         firebaseAuth = FirebaseAuth.getInstance()
 
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestEmail()
+            .build()
+
+        googleSignInClient = GoogleSignIn.getClient(this, gso)
+
+
         networkConnection.observe(this) {
             if (it) {
                 hideNetworkDialog()
@@ -68,6 +85,9 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+
+
+
 
 
 
