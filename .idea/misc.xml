@@ -4,7 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/blue_rounded_solid.xml" value="0.23020833333333332" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/circle_blue_solid_background.xml" value="0.2703125" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/circle_orange_solid_background.xml" value="0.2703125" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_access_time_red_24dp.xml" value="0.23020833333333332" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_arrow_left.xml" value="0.2703125" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_baseline_dashboard_24.xml" value="0.2546875" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.2546875" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2546875" />
@@ -29,6 +32,7 @@
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_announcements.xml" value="0.1" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_assignment.xml" value="0.25416666666666665" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_schedule.xml" value="0.152" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_select_type.xml" value="0.24010416666666667" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_settings.xml" value="0.1984375" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_splash.xml" value="0.25416666666666665" />

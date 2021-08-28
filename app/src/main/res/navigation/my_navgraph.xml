@@ -198,6 +198,16 @@
 
             android:id="@+id/action_courseDetailFragment_to_assignmentFragment"
             app:destination="@id/assignmentFragment" />
+        <action
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+
+
+            android:id="@+id/action_courseDetailFragment_to_scheduleFragment"
+            app:destination="@id/scheduleFragment" />
     </fragment>
     <fragment
         android:id="@+id/dashBoardFragment"
@@ -214,4 +224,9 @@
         android:name="com.classroom.classdeck.ui.courseDetails.assigments.AssignmentFragment"
         android:label="fragment_assignment"
         tools:layout="@layout/fragment_assignment" />
+    <fragment
+        android:id="@+id/scheduleFragment"
+        android:name="com.classroom.classdeck.ui.courseDetails.schedule.ScheduleFragment"
+        android:label="fragment_schedule"
+        tools:layout="@layout/fragment_schedule" />
 </navigation>

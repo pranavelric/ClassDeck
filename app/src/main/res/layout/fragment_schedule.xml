@@ -4,7 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.courseDetails.assigments.AssignmentFragment">
+    tools:context=".ui.courseDetails.schedule.ScheduleFragment">
+
+
+
+
+
 
 
 
@@ -111,7 +116,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="Assignments"
+                            android:text="Events"
                             android:textColor="@color/invertTextColor"
                             android:textSize="30sp"
                             android:textStyle="bold"
@@ -128,11 +133,11 @@
 
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/create_assign_button"
+                    android:id="@+id/create_event_button"
                     style="@style/loginButton"
                     android:layout_gravity="center"
                     android:layout_marginTop="@dimen/loginViewsMargin"
-                    android:text="Create new Assignment"
+                    android:text="Create new Event"
                     android:layout_width="match_parent"
                     android:layout_marginStart="@dimen/_6sdp"
                     android:layout_marginEnd="@dimen/_6sdp"
@@ -159,15 +164,40 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="@dimen/_8sdp"
                         android:gravity="center"
-                        android:text="No assignments given yet."
+                        android:text="No events today."
                         android:textColor="@color/text_color"
                         android:textSize="24sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
+                <com.shrikanthravi.collapsiblecalendarview.widget.CollapsibleCalendar
+
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="?attr/actionBarSize"
+                    android:layout_marginEnd="4dp"
+                    app:buttonLeft_drawable="@drawable/ic_arrow_left"
+                    app:buttonLeft_drawableTintColor="@color/icon_color"
+                    app:buttonRight_drawable="@drawable/ic_arrow_right"
+                    app:buttonRight_drawableTintColor="@color/icon_color"
+                    app:eventColor="@color/icon_color"
+                    app:expandIconColor="@color/icon_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:primaryColor="@color/background"
+
+                    app:selectedItem_background="@drawable/circle_orange_solid_background"
+                    app:selectedItem_textColor="#000"
+                    app:textColor="@color/text_color"
+                    app:todayItem_background="@drawable/circle_blue_solid_background"
+                    app:todayItem_textColor="#FFF" />
+
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/assignment_rc"
+                    android:id="@+id/event_rc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_14sdp"
@@ -200,6 +230,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -64,7 +64,11 @@
 
 
 
+    <color name="background">#ffffff</color>
+    <color name="icon_color">#000000</color>
 
+
+    <color name="card_icons_color">#0F538F</color>
 
 
 

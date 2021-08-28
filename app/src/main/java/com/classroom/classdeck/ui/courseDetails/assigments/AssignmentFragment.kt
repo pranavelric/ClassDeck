@@ -170,7 +170,7 @@ class AssignmentFragment : Fragment() {
         dialog.setContentView(R.layout.create_assignment_dialog)
 
 
-        val dialogButton = dialog.findViewById<MaterialButton>(R.id.create_assign_Button)
+        val dialogButton = dialog.findViewById<MaterialButton>(R.id.create_assignment_btn)
         val canceButton = dialog.findViewById<MaterialButton>(R.id.cancel)
         val announcementTitle = dialog.findViewById<EditText>(R.id.editTextAssignmentTitle)
         val announcementName = dialog.findViewById<EditText>(R.id.editTextAssignmentMessage)
@@ -178,6 +178,7 @@ class AssignmentFragment : Fragment() {
 
 
         canceButton.setOnClickListener { dialog.dismiss() }
+
         dialogButton.setOnClickListener {
 
             if (announcementName.text.isNullOrBlank()) {

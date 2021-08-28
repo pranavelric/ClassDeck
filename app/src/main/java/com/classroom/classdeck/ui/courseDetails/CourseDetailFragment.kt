@@ -53,9 +53,13 @@ class CourseDetailFragment : Fragment() {
 
         observeData()
         getData()
+
         setData()
         setMyClickListeners()
     }
+
+
+
 
     private fun observeData() {
 
@@ -108,7 +112,19 @@ class CourseDetailFragment : Fragment() {
 
 
         }
+        binding.calendarCard.setOnClickListener {
+            val bundle = Bundle().apply {
+                putSerializable(Constants.COURSE_BUNDLE_OBJ, course)
+                putSerializable(Constants.USERS_BUNDLE_OBJ, user)
+            }
 
+            findNavController().navigate(
+                R.id.action_courseDetailFragment_to_scheduleFragment,
+                bundle
+            )
+
+
+        }
 
     }
 
