@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_10sdp"
+    android:background="@color/primary_color"
+
+    >
+
+
+    <Toolbar
+        android:id="@+id/top_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_color_amoled"
+        android:title="Add question"
+        android:titleTextColor="@color/text_color"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/question_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_28sdp"
+        android:text="Question"
+        android:textColor="@color/heading_text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/top_toolbar" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/question_text"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_7sdp"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+        app:boxStrokeColor="@color/primary_color_amoled"
+        app:boxStrokeWidthFocused="@dimen/_2sdp"
+        app:layout_constraintTop_toBottomOf="@id/question_label">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_question"
+            style="@style/modifiedEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Question"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLength="250"
+            android:maxLines="3"
+            android:minLines="1"
+            android:textColor="@color/text_color" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/correct_answer_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:text="Correct answer"
+        android:textColor="@color/heading_text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/question_text" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/correct_answer_text"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_7sdp"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+        app:boxStrokeColor="@color/green"
+        app:boxStrokeWidthFocused="@dimen/_2sdp"
+        app:layout_constraintTop_toBottomOf="@id/correct_answer_label">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_correct_answer"
+            style="@style/modifiedEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Correct answer"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:minLines="1"
+            android:textColor="@color/text_color" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/incorrect_answer_a_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:text="Option B"
+        android:textColor="@color/heading_text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/correct_answer_text" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/incorrect_answer_a_text"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_7sdp"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+        app:boxStrokeColor="@color/primary_color_amoled"
+        app:boxStrokeWidthFocused="@dimen/_2sdp"
+        app:layout_constraintTop_toBottomOf="@id/incorrect_answer_a_label">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_incorrect_answerb"
+            style="@style/modifiedEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Option b"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:minLines="1"
+            android:textColor="@color/text_color" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/incorrect_answer_b_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:text="Option C"
+        android:textColor="@color/heading_text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/incorrect_answer_a_text" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/incorrect_answer_b_text"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_7sdp"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+        app:boxStrokeColor="@color/primary_color_amoled"
+        app:boxStrokeWidthFocused="@dimen/_2sdp"
+        app:layout_constraintTop_toBottomOf="@id/incorrect_answer_b_label">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_incorrect_answerc"
+            style="@style/modifiedEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Option c"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:minLines="1"
+            android:textColor="@color/text_color" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/incorrect_answer_c_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:text="Option D"
+        android:textColor="@color/heading_text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/incorrect_answer_b_text" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/incorrect_answer_c_text"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_7sdp"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+        app:boxStrokeColor="@color/primary_color_amoled"
+        app:boxStrokeWidthFocused="@dimen/_2sdp"
+        app:layout_constraintTop_toBottomOf="@id/incorrect_answer_c_label">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_incorrect_answerd"
+            style="@style/modifiedEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Option D"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:lines="1"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:minLines="1"
+            android:textColor="@color/text_color" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/save_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_2sdp"
+        android:text="Done"
+        android:backgroundTint="@color/primary_color_amoled"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

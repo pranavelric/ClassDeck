@@ -17,14 +17,15 @@ object Mappers {
         cu.correct = 0
         cu.date = contest.date
 
-        cu.gameEndDate = contest.gameEndDate
+        cu.startDate = contest.startDate
 
         cu.isEnded = contest.isEnded
 
         cu.isStarted = contest.isStarted
 
 
-
+        cu.courseCode = contest.courseCode
+        cu.courseName = contest.CourseName
         cu.question_numbers = contest.question_numbers
         cu.rank = 0
 
@@ -37,7 +38,7 @@ object Mappers {
         return cu
     }
 
-    fun userContestToContest(contest: QuizUser):Quiz{
+    fun userContestToContest(contest: QuizUser): Quiz {
 
         val cu = Quiz()
         cu.id = contest.id
@@ -45,8 +46,8 @@ object Mappers {
 
         cu.date = contest.date
 
-        cu.gameEndDate = contest.gameEndDate
-        cu.gameEndTime = contest.gameEndTime
+        cu.startDate = contest.startDate
+        cu.startTime = contest.startTime
         cu.isEnded = contest.isEnded
 
         cu.isStarted = contest.isStarted
@@ -58,6 +59,8 @@ object Mappers {
         cu.startTime = contest.startTime
         cu.time = contest.time
 
+        cu.courseCode = contest.courseCode
+        cu.CourseName = contest.courseName
 
         return cu
     }

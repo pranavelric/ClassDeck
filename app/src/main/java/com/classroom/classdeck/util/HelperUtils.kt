@@ -30,6 +30,10 @@ fun checkAboveKitkat(): Boolean {
 fun checkAboveLollipop(): Boolean {
     return Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP
 }
+fun checkAboveAndroidM():Boolean
+{
+    return Build.VERSION.SDK_INT > Build.VERSION_CODES.M
+}
 
 fun isAboveR(): Boolean {
     return Build.VERSION.SDK_INT > Build.VERSION_CODES.R

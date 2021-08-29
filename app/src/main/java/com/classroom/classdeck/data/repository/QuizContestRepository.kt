@@ -19,18 +19,17 @@ class QuizContestRepository
 
 
     private val rootRef: FirebaseFirestore = FirebaseFirestore.getInstance()
-    private val quizRef: CollectionReference =
-        rootRef.collection(Constants.QUIZ).document("Contest").collection(getTodaysDate())
-    private val notificationsRef: CollectionReference = rootRef.collection(Constants.NOTIFICATIONS)
+    private val courseRef: CollectionReference =
+        rootRef.collection(Constants.COURSE)
     private val usersRef: CollectionReference = rootRef.collection(Constants.USERS)
 
 
     val questionsList = ArrayList<Question?>()
-    suspend fun getQuizQuestions(contestId: String): MutableLiveData<ResponseState<List<Question?>>> {
+    suspend fun getQuizQuestions(courseId:String,contestId: String): MutableLiveData<ResponseState<List<Question?>>> {
         val updateUserLiveData: MutableLiveData<ResponseState<List<Question?>>> = MutableLiveData()
 
         questionsList.clear()
-        quizRef.document(contestId).collection(Constants.QUESTIONS)
+    courseRef.document(courseId).collection(Constants.QUIZ).document(contestId).collection(Constants.QUESTIONS)
             .orderBy("period", Query.Direction.ASCENDING).get()
             .addOnCompleteListener { task ->
 
@@ -66,10 +65,10 @@ class QuizContestRepository
 
 
     val contestsList = ArrayList<Quiz?>()
-    suspend fun getAllQuizContests(): MutableLiveData<ResponseState<List<Quiz?>>> {
+    suspend fun getAllQuizContests(courseId: String): MutableLiveData<ResponseState<List<Quiz?>>> {
         val updateUserLiveData: MutableLiveData<ResponseState<List<Quiz?>>> = MutableLiveData()
         contestsList.clear()
-        quizRef.whereEqualTo("ended", false).get()
+       courseRef.document(courseId).collection(Constants.QUIZ).get()
             .addOnCompleteListener { task ->
 
                 if (task.isSuccessful) {
@@ -85,7 +84,7 @@ class QuizContestRepository
                         updateUserLiveData.value = ResponseState.Success(contestsList)
 
                     } else {
-                        updateUserLiveData.value = ResponseState.Error("No contests found")
+                        updateUserLiveData.value = ResponseState.Error("No Quizzes found")
 
                     }
 
@@ -110,7 +109,7 @@ class QuizContestRepository
         val updateUserLiveData: MutableLiveData<ResponseState<List<QuizUser?>>> =
             MutableLiveData()
         userContestsList.clear()
-        usersRef.document(userId).collection(Constants.QUIZ).whereEqualTo("ended", false).get()
+        usersRef.document(userId).collection(Constants.QUIZ).get()
             .addOnCompleteListener { task ->
 
                 if (task.isSuccessful) {
@@ -126,7 +125,7 @@ class QuizContestRepository
                         updateUserLiveData.value = ResponseState.Success(userContestsList)
 
                     } else {
-                        updateUserLiveData.value = ResponseState.Error("No contests found")
+                        updateUserLiveData.value = ResponseState.Error("No Quizzes found")
 
                     }
 
@@ -143,11 +142,11 @@ class QuizContestRepository
     }
 
 
-    suspend fun getContest(id: String): MutableLiveData<ResponseState<Quiz?>> {
+    suspend fun getContest(courseId: String,id: String): MutableLiveData<ResponseState<Quiz?>> {
         val updateUserLiveData: MutableLiveData<ResponseState<Quiz?>> =
             MutableLiveData()
 
-        quizRef.document(id).get().addOnCompleteListener { task ->
+        courseRef.document(courseId).collection(Constants.QUIZ).document(id).get().addOnCompleteListener { task ->
             if (task.isSuccessful) {
                 if (task.result != null) {
                     val contest = task.result!!.toObject(Quiz::class.java)
@@ -155,7 +154,7 @@ class QuizContestRepository
                         ResponseState.Success(contest)
                 } else {
                     updateUserLiveData.value =
-                        ResponseState.Error("No contest found")
+                        ResponseState.Error("No quiz found")
                 }
             } else {
                 updateUserLiveData.value =
@@ -165,6 +164,58 @@ class QuizContestRepository
         return updateUserLiveData
 
     }
+
+
+
+        suspend fun createQuizContest(courseId: String,contest: Quiz): MutableLiveData<ResponseState<Quiz?>> {
+
+            val updateUserLiveData: MutableLiveData<ResponseState<Quiz?>> = MutableLiveData()
+
+
+
+                val quizGameRef =    courseRef.document(courseId).collection(Constants.QUIZ).document()
+                contest.id = quizGameRef.id
+
+                quizGameRef.set(contest).addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        updateUserLiveData.value = ResponseState.Success(contest)
+                    } else {
+                        updateUserLiveData.value =
+                            ResponseState.Error("QUiz failed to crease: ${task.exception?.message}")
+                    }
+
+                }.await()
+
+
+            return updateUserLiveData
+
+        }
+
+
+        suspend fun createQuizQuestions(
+            courseId: String,
+            quizId: String,
+            mQuestion: Question
+        ): MutableLiveData<ResponseState<String>> {
+            val updateUserLiveData: MutableLiveData<ResponseState<String>> = MutableLiveData()
+
+            courseRef.document(courseId).collection(Constants.QUIZ).document(quizId).collection(Constants.QUESTIONS)
+                .document(mQuestion.period.toString()).set(mQuestion).addOnCompleteListener {
+                    if (it.isSuccessful) {
+
+                        updateUserLiveData.value = ResponseState.Success("Question added")
+
+                    } else {
+                        updateUserLiveData.value =
+                            ResponseState.Error("Some error occured: ${it.exception?.message}")
+                    }
+                }.await()
+
+
+            return updateUserLiveData
+        }
+
+
 
 
 

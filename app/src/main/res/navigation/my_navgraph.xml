@@ -208,6 +208,17 @@
 
             android:id="@+id/action_courseDetailFragment_to_scheduleFragment"
             app:destination="@id/scheduleFragment" />
+        <action
+
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+
+
+            android:id="@+id/action_courseDetailFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
     </fragment>
     <fragment
         android:id="@+id/dashBoardFragment"
@@ -229,4 +240,57 @@
         android:name="com.classroom.classdeck.ui.courseDetails.schedule.ScheduleFragment"
         android:label="fragment_schedule"
         tools:layout="@layout/fragment_schedule" />
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.classroom.classdeck.ui.courseDetails.tests.QuizFragment"
+        android:label="quiz_fragment"
+        tools:layout="@layout/quiz_fragment" >
+        <action
+
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+
+
+            android:id="@+id/action_quizFragment_to_createQuizFragment"
+            app:destination="@id/createQuizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createQuizFragment"
+        android:name="com.classroom.classdeck.ui.courseDetails.tests.createTest.CreateQuizFragment"
+        android:label="fragment_create_quiz"
+        tools:layout="@layout/fragment_create_quiz" >
+        <action
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+
+
+
+            android:id="@+id/action_createQuizFragment_to_addQuestionsFragment"
+            app:destination="@id/addQuestionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addQuestionsFragment"
+        android:name="com.classroom.classdeck.ui.courseDetails.tests.createTest.createQuestions.AddQuestionsFragment"
+        android:label="fragment_add_questions"
+        tools:layout="@layout/fragment_add_questions" >
+        <action
+
+
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/my_navgraph"
+            app:popUpToInclusive="true"
+
+            android:id="@+id/action_addQuestionsFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+    </fragment>
 </navigation>

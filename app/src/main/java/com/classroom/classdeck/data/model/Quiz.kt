@@ -8,14 +8,21 @@ data class Quiz(
     var id: String,
     var isEnded: Boolean? = false,
     var isStarted: Boolean? = false,
+
     var date: String? = null,
     var time: String? = null,
+
     var startTime: String? = null,
-    var gameEndTime: String? = null,
+    var startDate: String? = null,
     var question_numbers: Int? = 10,
-    var gameEndDate: String? = null,
     var answerTime: Int? = 10,
+    var quizTitle: String = "",
+    var marks: Int? = 0,
+
     var joined: Int? = 0,
+
+    var courseCode: String = "",
+    var CourseName: String = "",
 
 
     ) : Serializable {

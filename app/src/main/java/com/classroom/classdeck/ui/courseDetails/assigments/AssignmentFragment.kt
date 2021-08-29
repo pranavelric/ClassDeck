@@ -200,7 +200,11 @@ class AssignmentFragment : Fragment() {
                     }
                 }
                 binding.progressBar.visible()
-                announcements?.let { it1 -> viewModel.addAssignments(it1) }
+                announcements?.let { it1 -> user?.uid?.let { it2 ->
+                    viewModel.addAssignments(it1,
+                        it2
+                    )
+                } }
 
 
                 dialog.dismiss()

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/loan_apply_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginTop="@dimen/_6sdp"
+
+    android:clickable="true"
+   app:cardElevation="@dimen/_4sdp"
+    android:focusable="true"
+    app:cardCornerRadius="@dimen/_6sdp"
+    app:rippleColor="@color/primary_color">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0A6C6C6C"
+
+        android:paddingEnd="@dimen/_16sdp"
+
+        >
+
+
+        <ImageView
+            android:id="@+id/earning_img_label"
+            android:layout_width="@dimen/_6sdp"
+            android:layout_height="0dp"
+            android:src="@color/primary_color_amoled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/qa_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:text="Q1."
+            android:textColor="@color/text_color"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/earning_img_label"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/question_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:text="----"
+            android:textColor="@color/text_color"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/qa_index"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/qa_index"
+            app:layout_constraintTop_toTopOf="@id/qa_index" />
+
+
+
+        <TextView
+            android:id="@+id/correct_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+android:ems="10"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="---"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="10sp"
+            android:background="@drawable/bg_rounded_green_chip"
+            android:paddingEnd="@dimen/_8sdp"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingTop="@dimen/_6sdp"
+            android:paddingBottom="@dimen/_6sdp"
+            app:layout_constraintEnd_toStartOf="@id/incorrect_answer_a"
+            app:layout_constraintStart_toEndOf="@id/earning_img_label"
+            app:layout_constraintTop_toBottomOf="@id/question_text" />
+
+        <TextView
+            android:id="@+id/incorrect_answer_a"
+            android:layout_width="wrap_content"
+            android:ems="10"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="---"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="10sp"
+            android:background="@drawable/bg_rounded_incorrect_chip"
+            android:paddingEnd="@dimen/_8sdp"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingTop="@dimen/_6sdp"
+            android:paddingBottom="@dimen/_6sdp"
+            app:layout_constraintStart_toEndOf="@id/correct_answer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question_text" />
+
+
+        <TextView
+            android:id="@+id/incorrect_answer_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="---"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="10sp"
+            android:background="@drawable/bg_rounded_incorrect_chip"
+            android:paddingEnd="@dimen/_8sdp"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingTop="@dimen/_6sdp"
+            android:paddingBottom="@dimen/_6sdp"
+            app:layout_constraintEnd_toStartOf="@id/incorrect_answer_c"
+            app:layout_constraintStart_toEndOf="@id/earning_img_label"
+            app:layout_constraintTop_toBottomOf="@id/correct_answer"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/_7sdp"
+            />
+
+        <TextView
+            android:id="@+id/incorrect_answer_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="---"
+            android:ems="10"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="10sp"
+            android:background="@drawable/bg_rounded_incorrect_chip"
+            android:paddingEnd="@dimen/_8sdp"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingTop="@dimen/_6sdp"
+            android:paddingBottom="@dimen/_6sdp"
+            app:layout_constraintStart_toEndOf="@id/incorrect_answer_b"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/incorrect_answer_a"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/_7sdp"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

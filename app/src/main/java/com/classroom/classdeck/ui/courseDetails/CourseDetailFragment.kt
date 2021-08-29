@@ -98,6 +98,19 @@ class CourseDetailFragment : Fragment() {
 
 
         }
+        binding.testCard.setOnClickListener {
+            val bundle = Bundle().apply {
+                putSerializable(Constants.COURSE_BUNDLE_OBJ, course)
+                putSerializable(Constants.USERS_BUNDLE_OBJ, user)
+            }
+
+            findNavController().navigate(
+                R.id.action_courseDetailFragment_to_quizFragment,
+                bundle
+            )
+
+
+        }
 
         binding.courseAssignmentCard.setOnClickListener {
             val bundle = Bundle().apply {

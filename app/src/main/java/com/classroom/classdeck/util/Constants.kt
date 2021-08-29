@@ -3,6 +3,7 @@ package com.classroom.classdeck.util
 object Constants {
 
 
+
     const val NOTIFICATIONS: String = "NOTIFICATIONS"
     const val SHARED_PREFRENCE = "SHARED_PREFRENCES"
     const val NIGHT_MODE_ENABLED = "NIGHT_MODE_ENABLED"
@@ -35,11 +36,14 @@ object Constants {
     const val COURSE: String = "COURSE"
     const val ANNOUNCEMENTS: String = "ANNOUNCEMENTS"
     const val ASSIGNMENTS: String = "ASSIGNMENTS"
+    const val EVENTS: String = "EVENTS"
 
     // Classroom quiz
     const val QUIZ: String = "QUIZ"
     const val QUESTIONS: String = "QUESTIONS"
     const val REGISTERED_STUDENTS: String = "REGISTERED_STUDENTS"
+    const val QUIZ_BUNDLE_OBJ: String = "QUIZ_BUNDLE_OBJ"
+
     val RESULTS: String = "RESULTS"
     const val RANKING: String = "RANKING"
 

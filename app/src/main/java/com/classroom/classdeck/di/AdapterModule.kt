@@ -1,8 +1,6 @@
 package com.classroom.classdeck.di
 
-import com.classroom.classdeck.adapters.AnnouncementAdapter
-import com.classroom.classdeck.adapters.AssignmentAdapter
-import com.classroom.classdeck.adapters.CourseAdapter
+import com.classroom.classdeck.adapters.*
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -26,6 +24,21 @@ class AdapterModule {
     @Provides
     fun providesAssignmentAdapter(): AssignmentAdapter {
         return AssignmentAdapter()
+    }
+
+    @Provides
+    fun providesEventAdapter(): EventAdapter {
+        return EventAdapter()
+    }
+
+    @Provides
+    fun providesQuizAdapter(): QuizAdapter {
+        return QuizAdapter()
+    }
+
+    @Provides
+    fun providesQaAdapter(): QuestionAdapter{
+        return QuestionAdapter()
     }
 
 }
