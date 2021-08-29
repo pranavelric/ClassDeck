@@ -42,10 +42,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:alpha="0.8"
-                        android:background="@color/primary_color_amoled"
+                        android:background="@drawable/ic_resume_folder_bro"
                         android:scaleType="center"
 
-                        android:src="@drawable/smiley_success"
+
                         app:layout_collapseParallaxMultiplier="0.7"
                         app:layout_constraintTop_toTopOf="parent"
                         app:shapeAppearanceOverlay="@style/roundedImageView" />
@@ -105,7 +105,7 @@
                                 android:id="@+id/menu_img"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
-                                android:src="@drawable/smiley_success"
+                                android:src="@drawable/ic_learning_bro"
 
                                 app:layout_constraintBottom_toTopOf="@id/text_path"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -152,7 +152,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:scaleType="fitCenter"
-                                android:src="@drawable/smiley_success"
+                                android:src="@drawable/ic_all_courses"
                                 app:layout_constraintBottom_toTopOf="@id/all_courses_text"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
@@ -179,6 +179,12 @@
 
                 </LinearLayout>
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_200sdp"
+                    android:src="@drawable/ic_resume_folder_bro"
+
+                    />
 
 
             </LinearLayout>

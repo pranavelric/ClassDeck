@@ -54,7 +54,7 @@
                     android:id="@+id/menu_img"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:src="@drawable/drake_error"
+                    android:src="@drawable/ic_professor_pana"
                     android:scaleType="fitCenter"
                     app:layout_constraintBottom_toTopOf="@id/text_path"
                     app:layout_constraintStart_toStartOf="parent"
@@ -68,7 +68,7 @@
                     android:gravity="center"
                     android:padding="@dimen/_5sdp"
                     android:text="Teacher"
-                    android:textColor="@color/white"
+                    android:textColor="@color/invertTextColor"
                     android:textSize="@dimen/_12sdp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent" />
@@ -101,7 +101,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/smiley_success"
+                    android:src="@drawable/ic_learning_amico"
                     app:layout_constraintBottom_toTopOf="@id/customer_care_text"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -114,7 +114,7 @@
                     android:gravity="center"
                     android:padding="@dimen/_5sdp"
                     android:text="Student"
-                    android:textColor="@color/white"
+                    android:textColor="@color/invertTextColor"
                     android:textSize="@dimen/_12sdp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent" />

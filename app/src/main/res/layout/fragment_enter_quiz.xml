@@ -252,7 +252,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_300sdp"
-                        android:src="@drawable/smiley_error" />
+                        android:src="@drawable/ic_empty_bro" />
 
 
                     <TextView

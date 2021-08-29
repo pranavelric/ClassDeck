@@ -44,9 +44,8 @@ android:background="@color/primary_color"
                         android:layout_height="130dp"
                         android:alpha="0.8"
                         android:background="@color/primary_color_amoled"
-                        android:scaleType="center"
-
-                        android:src="@drawable/smiley_success"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/dashboard"
                         app:layout_collapseParallaxMultiplier="0.7"
                         app:layout_constraintTop_toTopOf="parent"
                         app:shapeAppearanceOverlay="@style/roundedImageView" />
@@ -85,19 +84,21 @@ android:background="@color/primary_color"
                             android:layout_width="300dp"
                             android:layout_height="150dp"
                             android:layout_marginRight="4dp"
-                            android:src="@color/black" />
+                            android:src="@drawable/dashboard"
+
+                            />
 
                         <ImageView
                             android:layout_width="300dp"
                             android:layout_height="150dp"
                             android:layout_marginRight="4dp"
-                            android:src="@color/black" />
+                            android:src="@drawable/books" />
 
                         <ImageView
                             android:layout_width="300dp"
                             android:layout_height="150dp"
                             android:layout_marginRight="4dp"
-                            android:src="@color/black" />
+                            android:src="@drawable/classroom" />
 
                     </LinearLayout>
 
@@ -123,6 +124,7 @@ android:background="@color/primary_color"
                     android:layout_marginBottom="@dimen/_10sdp"
                     android:clipToPadding="false"
                     tools:itemCount="3"
+
                     tools:listitem="@layout/event_item" />
 
 
@@ -130,7 +132,7 @@ android:background="@color/primary_color"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:scrollbars="none"
-                    android:visibility="gone"
+android:visibility="gone"
                     android:id="@+id/events_cards"
                     >
 
@@ -157,7 +159,7 @@ android:background="@color/primary_color"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="4dp"
 
-                                    android:text="Information System Evaluation"
+                                    android:text="Computer Science"
                                     android:textColor="@color/md_blue_grey_500"
                                     android:textSize="16sp" />
 
@@ -228,7 +230,7 @@ android:background="@color/primary_color"
                                             android:layout_height="wrap_content"
                                             android:drawableLeft="@drawable/ic_person_outline_red_24dp"
                                             android:drawablePadding="8dp"
-                                            android:text="Lecturer available"
+                                            android:text="Mr Pranav"
                                             android:textSize="12sp" />
 
                                     </LinearLayout>
@@ -257,7 +259,7 @@ android:background="@color/primary_color"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="4dp"
 
-                                    android:text="Information System Evaluation"
+                                    android:text="Computer Science"
                                     android:textColor="@color/md_blue_grey_500"
                                     android:textSize="16sp" />
 
@@ -328,7 +330,7 @@ android:background="@color/primary_color"
                                             android:layout_height="wrap_content"
                                             android:drawableLeft="@drawable/ic_person_outline_red_24dp"
                                             android:drawablePadding="8dp"
-                                            android:text="Lecturer available"
+                                            android:text="Mr Pranav"
                                             android:textSize="12sp" />
 
                                     </LinearLayout>

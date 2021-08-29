@@ -105,7 +105,7 @@ class EntryFragment : Fragment() {
             DialogSheet(it)
                 .setTitle("Already played")
                 .setMessage(
-                    "You have already completed this Quiz.\nYou answered ${contestUser?.correct} out of ${contestUser?.question_numbers} questions correctly.\nPlease wait for contest to end to get rewards if eligible."
+                    "You have already completed this Quiz.\nYou answered ${contestUser?.correct} out of ${contestUser?.question_numbers} questions correctly."
                 )
                 .setColoredNavigationBar(true)
                 .setTitleTextSize(20) // In SP

@@ -44,9 +44,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:alpha="0.8"
-                        android:background="@color/primary_color_amoled"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/smiley_success"
+                        android:background="#040b14"
+
+                        android:src="@drawable/ic_learning_amico"
                         app:layout_collapseParallaxMultiplier="0.7"
                         app:layout_constraintTop_toTopOf="parent"
                         app:shapeAppearanceOverlay="@style/roundedImageView" />
@@ -94,14 +94,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:visibility="gone"
-                   >
+                    android:visibility="gone">
 
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_300sdp"
-                        android:src="@drawable/smiley_success" />
+                        android:src="@drawable/ic_empty_bro" />
 
 
                     <TextView
@@ -117,17 +116,16 @@
                         android:textStyle="bold" />
 
                     <com.google.android.material.button.MaterialButton
-                        android:layout_width="match_parent"
                         android:id="@+id/join_course_btn"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
                         android:layout_marginEnd="@dimen/_20sdp"
+                        android:backgroundTint="@color/primary_color_amoled"
                         android:text="Join course"
                         android:textColor="@color/invertTextColor"
-                        android:backgroundTint="@color/primary_color_amoled"
-                        app:cornerRadius="@dimen/_10sdp"
-android:layout_marginTop="@dimen/_10sdp"
-                        />
+                        app:cornerRadius="@dimen/_10sdp" />
 
 
                 </LinearLayout>

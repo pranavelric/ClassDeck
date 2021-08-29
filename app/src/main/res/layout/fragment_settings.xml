@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.settings.SettingsFragment">
 
 
@@ -41,12 +41,11 @@
                         android:layout_height="150dp"
                         android:alpha="0.8"
                         android:background="@color/primary_color"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/smiley_success"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_settings_bro"
                         app:layout_collapseParallaxMultiplier="0.7"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:shapeAppearanceOverlay="@style/roundedImageView"
-                         />
+                        app:shapeAppearanceOverlay="@style/roundedImageView" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -106,18 +105,19 @@
                     android:layout_margin="@dimen/_10sdp"
                     android:thumb="@drawable/switch_thum"
                     android:track="@drawable/switch_track_custom"
+                    app:layout_constraintBottom_toBottomOf="@id/night_mode"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/night_mode"
-                    app:layout_constraintBottom_toBottomOf="@id/night_mode"
                     app:track="@drawable/switch_track_custom" />
 
 
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
 
-
-
-
-
-
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:src="@drawable/ic_settings_bro"
+                    app:layout_constraintTop_toBottomOf="@id/nightmode_switch" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -127,7 +127,6 @@
 
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

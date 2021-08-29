@@ -109,7 +109,7 @@
         android:lineHeight="@dimen/_20sdp"
         android:paddingStart="@dimen/_18sdp"
         android:paddingEnd="@dimen/_18sdp"
-        android:text="This quiz will contain 10 questions. You will get 10s to answer for each questions. For each correct answer your will receive 1 mark.You will be ranked accoring to your marks."
+        android:text="This quiz will contain 10 questions. You will get 10s to answer for each questions. For each correct answer your will receive 1 mark."
         android:textColor="@color/text_color"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@id/play_btn"

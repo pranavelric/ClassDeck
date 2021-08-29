@@ -46,8 +46,8 @@
                         android:layout_height="150dp"
                         android:alpha="0.8"
                         android:background="@color/primary_color"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/smiley_error"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/test"
                         app:layout_collapseParallaxMultiplier="0.7"
                         app:layout_constraintTop_toTopOf="parent"
                         app:shapeAppearanceOverlay="@style/roundedImageView" />

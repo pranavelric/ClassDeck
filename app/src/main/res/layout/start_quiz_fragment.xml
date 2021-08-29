@@ -16,7 +16,7 @@
         android:alpha="0.8"
         android:background="@color/primary_color"
         android:scaleType="center"
-        android:src="@drawable/smiley_error"
+        android:src="@drawable/pat"
         app:layout_collapseParallaxMultiplier="0.7"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearanceOverlay="@style/roundedImageView" />

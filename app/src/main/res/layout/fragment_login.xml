@@ -58,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:indeterminate="true"
-        android:indeterminateTint="@color/black"
+        android:indeterminateTint="@color/primary_color_amoled"
         android:visibility="gone"
         android:translationY="30dp"
         app:layout_constraintBottom_toTopOf="@id/wave_down"

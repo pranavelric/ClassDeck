@@ -50,7 +50,7 @@
             android:maxLength="50"
             android:maxLines="1"
             android:minLines="1"
-android:textColor="@color/black"
+android:textColor="@color/text_color"
          />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -85,7 +85,7 @@ android:textColor="@color/black"
             android:lines="1"
             android:maxLines="1"
             android:minLines="1"
-            android:textColor="@color/black"
+            android:textColor="@color/text_color"
             />
 
     </com.google.android.material.textfield.TextInputLayout>

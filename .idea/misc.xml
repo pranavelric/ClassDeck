@@ -9,17 +9,32 @@
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/circle_blue_solid_background.xml" value="0.2703125" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/circle_orange_solid_background.xml" value="0.2703125" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_access_time_red_24dp.xml" value="0.23020833333333332" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_all_courses.xml" value="0.2703125" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_announce_ment.xml" value="0.2703125" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_arrow_left.xml" value="0.2703125" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_assignment.xml" value="0.2703125" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_baseline_dashboard_24.xml" value="0.2546875" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.2546875" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2546875" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_empty_bro.xml" value="0.2703125" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_event_available_red_24dp.xml" value="0.23020833333333332" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_group_video_rafiki.xml" value="0.2703125" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.2703125" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_learning_amico.xml" value="0.2703125" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_learning_bro.xml" value="0.2703125" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_location_on_red_24dp.xml" value="0.23020833333333332" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_online_test_amico.xml" value="0.2703125" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_online_test_rafiki.xml" value="0.2515625" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_person_outline_red_24dp.xml" value="0.23020833333333332" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_professor_pana.xml" value="0.2703125" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_receipt_red_24dp.xml" value="0.23020833333333332" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_resume_folder_bro.xml" value="0.2703125" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_schedule_amico.xml" value="0.2703125" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_school_red_24dp.xml" value="0.23020833333333332" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_settings_bro.xml" value="0.2703125" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_wave_down.xml" value="0.2703125" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_wave_up.xml" value="0.2703125" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/ic_webinar_amico.xml" value="0.2703125" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/login_button_bk.xml" value="0.2703125" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/drawable/switch_thum.xml" value="0.21458333333333332" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/activity_main.xml" value="0.1" />
@@ -27,8 +42,8 @@
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/add_event_dialog.xml" value="0.2" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/cards_item.xml" value="0.22395833333333334" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/course_card.xml" value="0.4" />
-        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/course_card_lay.xml" value="0.4" />
-        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/course_detail_fragment.xml" value="0.176" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/course_card_lay.xml" value="0.536" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/course_detail_fragment.xml" value="0.264" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/create_announcement_dialog.xml" value="0.26614583333333336" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/create_assignment_dialog.xml" value="0.25416666666666665" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/dash_board_fragment.xml" value="0.264" />
@@ -36,14 +51,14 @@
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/event_item.xml" value="0.4" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_add_questions.xml" value="0.25416666666666665" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_all_courses.xml" value="0.21944444444444444" />
-        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_announcements.xml" value="0.1" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_announcements.xml" value="0.264" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_assignment.xml" value="0.25416666666666665" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_create_quiz.xml" value="0.264" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_enter_quiz.xml" value="0.264" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_login.xml" value="0.25416666666666665" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_quiz_results.xml" value="0.25416666666666665" />
-        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_schedule.xml" value="0.136" />
-        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_select_type.xml" value="0.24010416666666667" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_schedule.xml" value="0.264" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_select_type.xml" value="0.264" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_settings.xml" value="0.1984375" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_splash.xml" value="0.25416666666666665" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_your_courses.xml" value="0.25416666666666665" />
@@ -68,6 +83,7 @@
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/menu/btm_bar_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/menu/home_menu.xml" value="0.22291666666666668" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/menu/main_menu.xml" value="0.22291666666666668" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2703125" />
       </map>
     </option>
   </component>

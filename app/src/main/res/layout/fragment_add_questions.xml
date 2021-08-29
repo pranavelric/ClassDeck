@@ -49,7 +49,7 @@
                         android:alpha="0.8"
                         android:background="@color/primary_color"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/smiley_error"
+                        android:src="@drawable/test"
                         app:layout_collapseParallaxMultiplier="0.7"
                         app:layout_constraintTop_toTopOf="parent"
                         app:shapeAppearanceOverlay="@style/roundedImageView" />
@@ -111,7 +111,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_300sdp"
-                        android:src="@drawable/smiley_error" />
+                        android:src="@drawable/ic_empty_bro" />
 
 
                     <TextView

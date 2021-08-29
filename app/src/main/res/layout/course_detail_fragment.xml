@@ -43,9 +43,8 @@
                         android:layout_height="200dp"
                         android:alpha="0.8"
                         android:background="@color/primary_color_amoled"
-                        android:scaleType="center"
-
-                        android:src="@drawable/smiley_success"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/books"
                         app:layout_collapseParallaxMultiplier="0.7"
                         app:layout_constraintTop_toTopOf="parent"
                         app:shapeAppearanceOverlay="@style/roundedImageView" />
@@ -106,7 +105,7 @@
                                 android:id="@+id/menu_img"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
-                                android:src="@drawable/smiley_success"
+                                android:src="@drawable/ic_announce_ment"
 
                                 app:layout_constraintBottom_toTopOf="@id/text_path"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -153,7 +152,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:scaleType="fitCenter"
-                                android:src="@drawable/smiley_success"
+                                android:src="@drawable/ic_assignment"
                                 app:layout_constraintBottom_toTopOf="@id/assignment_text"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
@@ -204,9 +203,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:scaleType="fitCenter"
-                                android:src="@drawable/smiley_success"
+                                android:src="@drawable/ic_online_test_rafiki"
                                 app:layout_constraintBottom_toTopOf="@id/test_text"
                                 app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
                             <TextView
@@ -250,7 +250,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:scaleType="fitCenter"
-                                android:src="@drawable/smiley_success"
+                                android:src="@drawable/ic_schedule_amico"
                                 app:layout_constraintBottom_toTopOf="@id/calendar_text"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
@@ -304,7 +304,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:scaleType="fitCenter"
-                                android:src="@drawable/smiley_success"
+                                android:src="@drawable/ic_group_video_rafiki"
                                 app:layout_constraintBottom_toTopOf="@id/join_meeting_text"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />

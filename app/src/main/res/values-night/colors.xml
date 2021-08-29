@@ -52,6 +52,7 @@
 
     <color name="invertTextColor">#000000</color>
 
+    <color name="inverted_amoled">#040b14</color>
 
 
     <color name="background">#040b14</color>

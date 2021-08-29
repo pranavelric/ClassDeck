@@ -56,7 +56,7 @@
     <color name="switchTrackActive">#AA8F16</color>
     <color name="switchTrackNormal">#AA8F16</color>
 
-
+<color name="inverted_amoled">#F8D01F</color>
     <color name="invertTextColor">#FFFFFF</color>
 
 

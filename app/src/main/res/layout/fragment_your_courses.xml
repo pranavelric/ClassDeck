@@ -44,9 +44,9 @@
                         android:layout_height="150dp"
                         android:alpha="0.8"
                         android:background="@color/primary_color_amoled"
-                        android:scaleType="center"
+                        android:scaleType="fitXY"
 
-                        android:src="@drawable/smiley_success"
+                        android:src="@drawable/books"
                         app:layout_collapseParallaxMultiplier="0.7"
                         app:layout_constraintTop_toTopOf="parent"
                         app:shapeAppearanceOverlay="@style/roundedImageView" />
@@ -101,7 +101,7 @@
                             android:id="@+id/announcement_img_label"
                             android:layout_width="@dimen/_100sdp"
                             android:layout_height="@dimen/_100sdp"
-                            android:src="@drawable/smiley_error"
+                            android:src="@drawable/ic_learning_bro"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -138,7 +138,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_300sdp"
-                        android:src="@drawable/smiley_success" />
+                        android:src="@drawable/ic_empty_bro" />
 
 
                     <TextView
