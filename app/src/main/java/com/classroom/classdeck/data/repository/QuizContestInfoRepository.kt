@@ -1,10 +1,7 @@
 package com.classroom.classdeck.data.repository
 
 import androidx.lifecycle.MutableLiveData
-import com.classroom.classdeck.data.model.Question
-import com.classroom.classdeck.data.model.Quiz
-import com.classroom.classdeck.data.model.RankingModelList
-import com.classroom.classdeck.data.model.User
+import com.classroom.classdeck.data.model.*
 import com.classroom.classdeck.util.Constants
 import com.classroom.classdeck.util.Mappers
 import com.classroom.classdeck.util.ResponseState
@@ -19,75 +16,38 @@ class QuizContestInfoRepository
 
 
     private val rootRef: FirebaseFirestore = FirebaseFirestore.getInstance()
-    private val quizRef: CollectionReference =
-        rootRef.collection(Constants.QUIZ).document("Contest").collection(getTodaysDate())
+    private val courseRef: CollectionReference =
+        rootRef.collection(Constants.COURSE)
     private val notificationsRef: CollectionReference = rootRef.collection(Constants.NOTIFICATIONS)
     private val usersRef: CollectionReference = rootRef.collection(Constants.USERS)
 
-
-
-    val questionsList = ArrayList<Question?>()
-    suspend fun getQuizQuestions(contestId: String): MutableLiveData<ResponseState<List<Question?>>> {
-        val updateUserLiveData: MutableLiveData<ResponseState<List<Question?>>> = MutableLiveData()
-
-        questionsList.clear()
-        quizRef.document(contestId).collection(Constants.QUESTIONS)
-            .orderBy("period", Query.Direction.ASCENDING).get()
-            .addOnCompleteListener { task ->
-
-                if (task.isSuccessful) {
-                    if (task.result != null && !task.result!!.isEmpty) {
-
-
-                        for (doc: DocumentSnapshot in task.result!!.documents) {
-                            val obj = doc.toObject(Question::class.java)
-
-                            questionsList.add(obj)
-                        }
-
-                        updateUserLiveData.value = ResponseState.Success(questionsList)
-
-                    } else {
-                        updateUserLiveData.value = ResponseState.Error("No questions found")
-
-                    }
-
-                } else {
-                    updateUserLiveData.value =
-                        ResponseState.Error("Some error occured: ${task.exception?.message}")
-
-                }
-
-
-            }.await()
-
-        return updateUserLiveData
-    }
 
 
 
 
     suspend fun enterInContest(
         user: User,
-        contest: Quiz?
+        contest: Quiz,
+        course: Course
     ): MutableLiveData<ResponseState<String?>> {
         val newUserMutableLiveData: MutableLiveData<ResponseState<String?>> = MutableLiveData()
-        // user withdrawal ref
+
         val userQuizRef =
-            usersRef.document(user.uid).collection(Constants.QUIZ).document(contest?.id.toString())
+            usersRef.document(user.uid).collection(Constants.QUIZ).document(contest.id.toString())
 
         val registeredUsers =
-            quizRef.document(contest?.id.toString()).collection(Constants.REGISTERED_STUDENTS)
+           courseRef.document(course.courseCode).collection(Constants.QUIZ).document(contest.id.toString()).collection(Constants.REGISTERED_STUDENTS)
                 .document(user.uid)
-        val quizRef = quizRef.document(contest?.id.toString())
-        val userContest = contest?.let { Mappers.contestToUserContest(it) }
+
+        val quizRef =   courseRef.document(course.courseCode).collection(Constants.QUIZ).document(contest.id.toString())
+        val userContest = contest.let { Mappers.contestToUserContest(it) }
 
 
 
         rootRef.runBatch { batch ->
 
 
-            userContest?.let { batch.set(userQuizRef, it) }
+            userContest.let { batch.set(userQuizRef, it) }
             batch.set(registeredUsers, user)
             batch.update(
                 quizRef,
@@ -119,12 +79,13 @@ class QuizContestInfoRepository
 
     suspend fun checkIfAlreadyRegisteredInContest(
         userId: String,
-        contestId: String
+        contestId: String,
+        course: Course
     ): MutableLiveData<ResponseState<Boolean?>> {
 
         val newUserMutableLiveData: MutableLiveData<ResponseState<Boolean?>> = MutableLiveData()
 
-        quizRef.document(contestId).collection(Constants.REGISTERED_STUDENTS)
+        courseRef.document(course.courseCode).collection(Constants.QUIZ).document(contestId).collection(Constants.REGISTERED_STUDENTS)
             .whereEqualTo("uid", userId).get()
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
@@ -151,11 +112,11 @@ class QuizContestInfoRepository
 
 
 
-    suspend fun getUsersRanking(id: String): MutableLiveData<ResponseState<RankingModelList?>> {
+    suspend fun getUsersRanking(id: String,course: Course): MutableLiveData<ResponseState<RankingModelList?>> {
         val newUserMutableLiveData: MutableLiveData<ResponseState<RankingModelList?>> =
             MutableLiveData()
 
-        quizRef.document(id).collection(Constants.RESULTS).document(Constants.RANKING).get()
+        courseRef.document(course.courseCode).collection(Constants.QUIZ).document(id.toString()).collection(Constants.RESULTS).document(Constants.RANKING).get()
             .addOnCompleteListener {
                 if (it.isSuccessful) {
                     if (it.result != null && it.result!!.exists()) {
@@ -178,10 +139,10 @@ class QuizContestInfoRepository
 
 
 
-    fun getQuizContest(id: String): MutableLiveData<ResponseState<Quiz?>> {
+    fun getQuizContest(id: String,course: Course): MutableLiveData<ResponseState<Quiz?>> {
         val newUserMutableLiveData: MutableLiveData<ResponseState<Quiz?>> = MutableLiveData()
 
-        quizRef.document(id).get().addOnCompleteListener {
+        courseRef.document(course.courseCode).collection(Constants.QUIZ).document(id).get().addOnCompleteListener {
             if (it.isSuccessful) {
 
                 if (it.result != null && it.result!!.exists()) {

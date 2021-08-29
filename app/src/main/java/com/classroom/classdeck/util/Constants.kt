@@ -3,7 +3,6 @@ package com.classroom.classdeck.util
 object Constants {
 
 
-
     const val NOTIFICATIONS: String = "NOTIFICATIONS"
     const val SHARED_PREFRENCE = "SHARED_PREFRENCES"
     const val NIGHT_MODE_ENABLED = "NIGHT_MODE_ENABLED"
@@ -21,7 +20,7 @@ object Constants {
 
     // refrences name
     const val USERS = "USERS"
-
+    const val CONTEST_USER_BUNDLE_OBJ: String ="CONTEST_USER_BUNDLE_OBJ"
 
     const val USERS_BUNDLE_OBJ = "USER_BUNDLE_OBJ"
     const val COURSE_BUNDLE_OBJ = "COURSE_BUNDLE_OBJ"

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_color"
+    tools:context=".ui.courseDetails.tests.enterTest.entry.EntryFragment">
+
+
+    <ImageView
+        android:id="@+id/entry_img"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:background="@drawable/quizent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/entry_heading_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/_8sdp"
+        android:text="Starting in"
+        android:textColor="@color/heading_text"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/entry_img" />
+
+    <LinearLayout
+        android:id="@+id/edit_text_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:padding="@dimen/_8sdp"
+        app:layout_constraintTop_toBottomOf="@id/entry_heading_1">
+
+        <TextView
+            android:id="@+id/days_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rounded_white_chip"
+
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="0D"
+            android:textColor="@color/primary_color"
+            android:textSize="42sp"
+            app:layout_constraintBottom_toBottomOf="@id/easyCountDownTextview"
+            app:layout_constraintEnd_toStartOf="@id/days_colon"
+            app:layout_constraintTop_toTopOf="@id/easyCountDownTextview" />
+
+        <TextView
+            android:id="@+id/days_colon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_8sdp"
+            android:text=":"
+            android:textColor="@color/text_color"
+            android:textSize="42sp"
+
+            app:layout_constraintBottom_toBottomOf="@id/easyCountDownTextview"
+            app:layout_constraintEnd_toStartOf="@id/easyCountDownTextview"
+            app:layout_constraintTop_toTopOf="@id/easyCountDownTextview" />
+
+        <ir.samanjafari.easycountdowntimer.EasyCountDownTextview
+            android:id="@+id/easyCountDownTextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:colonColor="@color/white"
+            app:digitBackground="@drawable/bg_rounded_white_chip"
+            app:hours="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/days_text"
+            app:layout_constraintTop_toBottomOf="@id/entry_heading_1"
+            app:minute="0"
+            app:second="0"
+            app:setAnimation="true"
+            app:showDays="false"
+            app:showHours="true"
+            app:start_automatically="false"
+            app:textColor="@color/primary_color"
+            app:textSize="42sp"
+            app:useFarsiNumeral="false" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/entry_heading_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp"
+        android:text="Attempt Quiz in one go."
+        android:textAlignment="center"
+        android:textColor="@color/heading_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/entry_img" />
+
+    <TextView
+        android:id="@+id/quiz_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineHeight="@dimen/_20sdp"
+        android:paddingStart="@dimen/_18sdp"
+        android:paddingEnd="@dimen/_18sdp"
+        android:text="This quiz will contain 10 questions. You will get 10s to answer for each questions. For each correct answer your will receive 1 mark.You will be ranked accoring to your marks."
+        android:textColor="@color/text_color"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/play_btn"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_lay" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/play_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_18sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:text="Agree &amp; Start"
+        android:textColor="@color/primary_color"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/primary_color_amoled"
+        app:cornerRadius="@dimen/_6sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="@color/primary_color" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="match_parent"
+        android:elevation="@dimen/_30sdp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/primary_color_amoled"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

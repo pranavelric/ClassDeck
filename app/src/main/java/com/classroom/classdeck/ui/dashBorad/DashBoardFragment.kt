@@ -12,9 +12,8 @@ import com.classroom.classdeck.databinding.DashBoardFragmentBinding
 class DashBoardFragment : Fragment() {
 
 
-
-private lateinit var binding:DashBoardFragmentBinding
-    private val viewModel: DashBoardViewModel by lazy{
+    private lateinit var binding: DashBoardFragmentBinding
+    private val viewModel: DashBoardViewModel by lazy {
         ViewModelProvider(this).get(DashBoardViewModel::class.java)
     }
 
@@ -22,7 +21,7 @@ private lateinit var binding:DashBoardFragmentBinding
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DashBoardFragmentBinding.inflate(inflater,container,false)
+        binding = DashBoardFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/primary_color"
+    tools:context=".ui.courseDetails.tests.enterTest.EnterQuizFragment">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary_color">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_color"
+            android:fitsSystemWindows="true"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/primary_color"
+                android:backgroundTint="@color/primary_color"
+                app:title="Quiz"
+                app:titleTextColor="@color/heading_text"
+
+                />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00DADADA"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/app_bar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/frame_quiz"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#75EEEFEA"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/quiz_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="100dp"
+                        android:paddingStart="@dimen/_6sdp"
+                        android:paddingTop="@dimen/_6sdp"
+                        android:paddingEnd="@dimen/_6sdp"
+                        android:paddingBottom="@dimen/_26sdp"
+                        app:background="@color/white">
+
+
+                        <TextView
+                            android:id="@+id/course_code_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CS101"
+                            android:textSize="12sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/quiz_title_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:text="DBMS Quiz"
+                            android:textColor="@color/heading_text"
+                            android:textSize="26sp"
+                            android:textStyle="bold"
+
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/course_code_text" />
+
+                        <ImageView
+                            android:id="@+id/registered_tag"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:src="@drawable/reg"
+                            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/quiz_title_text"
+                            app:layout_constraintEnd_toStartOf="@id/entry_btn"
+                            app:layout_constraintStart_toEndOf="@id/quiz_title_text"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/green"
+
+
+                            />
+
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/reg_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/primary_color_amoled"
+                            android:text="Register"
+                            android:textColor="@color/invertTextColor"
+                            android:textSize="12sp"
+
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:rippleColor="@color/primary_color" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/entry_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:text="Start"
+                            android:textColor="@color/invertTextColor"
+                            android:textSize="12sp"
+android:backgroundTint="@color/primary_color_amoled"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            app:rippleColor="@color/primary_color" />
+
+
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </FrameLayout>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/util_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="4dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/frame_quiz"
+                    app:layout_constraintTop_toBottomOf="@+id/frame_quiz"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+
+                            android:id="@+id/text_date"
+                            android:layout_width="wrap_content"
+                            android:paddingStart="@dimen/_6sdp"
+                            android:paddingEnd="@dimen/_6sdp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/bg_rounded_gray_chip"
+                            android:backgroundTint="@color/heading_text"
+                            android:gravity="center"
+                            android:text="20.05.2020"
+                            android:textColor="@color/invertTextColor"
+                            android:textSize="12sp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="end">
+
+                            <ImageView
+                                android:id="@+id/quiz_mark_image"
+                                android:layout_width="@dimen/_10sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="@dimen/_3sdp"
+                                android:src="@android:drawable/star_on"
+                                android:textColor="#040b14" />
+
+                            <TextView
+                                android:id="@+id/quiz_marks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:gravity="center"
+                                android:text="10 marks"
+                                android:textColor="#040b14"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/leaderboard_rc"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/util_card"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:paddingStart="@dimen/_6sdp"
+                    android:paddingEnd="@dimen/_6sdp"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/leaderboard_item" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/util_card"
+                    android:id="@+id/empty_lay"
+                    android:background="@color/primary_color"
+                    >
+
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_300sdp"
+                        android:src="@drawable/smiley_error" />
+
+
+                    <TextView
+                        android:id="@+id/empty_error"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:gravity="center"
+                        android:text="No students participated till now."
+                        android:textColor="@color/text_color"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="@dimen/_36sdp"
+        android:elevation="@dimen/_16sdp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/black"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,16 +16,23 @@ class StartQuizRepository
 
 
     private val rootRef: FirebaseFirestore = FirebaseFirestore.getInstance()
-    private val quizRef: CollectionReference =
-        rootRef.collection(Constants.QUIZ).document("Contest").collection(getTodaysDate())
-    private val notificationsRef: CollectionReference = rootRef.collection(Constants.NOTIFICATIONS)
+    private val courseRef: CollectionReference =
+        rootRef.collection(Constants.COURSE)
+
+
     private val usersRef: CollectionReference = rootRef.collection(Constants.USERS)
     val questionsList = ArrayList<Question?>()
-    suspend fun getQuizQuestions(contestId: String): MutableLiveData<ResponseState<List<Question?>>> {
+
+
+    suspend fun getQuizQuestions(
+        contestId: String,
+        course: Course
+    ): MutableLiveData<ResponseState<List<Question?>>> {
         val updateUserLiveData: MutableLiveData<ResponseState<List<Question?>>> = MutableLiveData()
 
         questionsList.clear()
-        quizRef.document(contestId).collection(Constants.QUESTIONS)
+        courseRef.document(course.courseCode).collection(Constants.QUIZ).document(contestId)
+            .collection(Constants.QUESTIONS)
             .orderBy("period", Query.Direction.ASCENDING).get()
             .addOnCompleteListener { task ->
 
@@ -59,11 +66,11 @@ class StartQuizRepository
     }
 
 
-
     suspend fun submitQuiz(
         contest: Quiz,
         contestUsr: QuizUser,
-        user: User?
+        user: User?,
+        course: Course
     ): MutableLiveData<ResponseState<Boolean>> {
         val updateUserLiveData: MutableLiveData<ResponseState<Boolean>> = MutableLiveData()
         val userContestRef =
@@ -71,7 +78,9 @@ class StartQuizRepository
                 usersRef.document(it).collection(Constants.QUIZ).document(contest?.id.toString())
             }
 
-        val results = quizRef.document(contest?.id.toString()).collection(Constants.RESULTS)
+        val results = courseRef.document(course.courseCode).collection(Constants.QUIZ).document(
+            contest.id.toString()
+        ).collection(Constants.RESULTS)
             .document(user?.uid.toString())
 
 
@@ -83,7 +92,10 @@ class StartQuizRepository
 
         val result = ResultModel()
         result.contestId = contest.id
+        result.courseCode = course.courseCode
         result.userId = user?.uid
+        result.userEmail = user?.email.toString()
+        result.userName = user?.name.toString()
         result.correct = contestUsr.correct
         result.wrong = contestUsr.wrong
         result.userPhoneNumber = user?.phoneNumber.toString()
@@ -113,13 +125,10 @@ class StartQuizRepository
 
         }.await()
 
-
-        Log.d("RRR", "submitQuiz:${updateUserLiveData.value} ___")
         return updateUserLiveData
 
 
     }
-
 
 
 }

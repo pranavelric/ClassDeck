@@ -15,11 +15,7 @@ class QuizEntryRepository
 
 
     private val rootRef: FirebaseFirestore = FirebaseFirestore.getInstance()
-    private val quizRef: CollectionReference =
-        rootRef.collection(Constants.QUIZ).document("Contest").collection(getTodaysDate())
-    private val megaeRef: CollectionReference =
-        rootRef.collection(Constants.QUIZ).document("Contest").collection("Mega_Contest")
-    private val notificationsRef: CollectionReference = rootRef.collection(Constants.NOTIFICATIONS)
+    private val courseRef: CollectionReference =  rootRef.collection(Constants.COURSE)
     private val usersRef: CollectionReference = rootRef.collection(Constants.USERS)
 
 
@@ -51,11 +47,11 @@ class QuizEntryRepository
 
     }
 
-    suspend fun setGameStarted(id: String) {
+    suspend fun setQuizStarted(id: String,courseId: String) {
 
         val file = HashMap<String, Any>()
         file["started"] = true
-        quizRef.document(id).update(file).await()
+        courseRef.document(courseId).collection(Constants.QUIZ).document(id).update(file).await()
 
     }
 

@@ -37,8 +37,15 @@ class AdapterModule {
     }
 
     @Provides
-    fun providesQaAdapter(): QuestionAdapter{
+    fun providesQaAdapter(): QuestionAdapter {
         return QuestionAdapter()
     }
+
+
+    @Provides
+    fun providesLearderBoardAdapter(): LeaderBoardAdapter {
+        return LeaderBoardAdapter()
+    }
+
 
 }

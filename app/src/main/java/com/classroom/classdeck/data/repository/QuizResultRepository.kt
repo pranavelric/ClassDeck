@@ -1,6 +1,7 @@
 package com.classroom.classdeck.data.repository
 
 import androidx.lifecycle.MutableLiveData
+import com.classroom.classdeck.data.model.Course
 import com.classroom.classdeck.data.model.RankingModel
 import com.classroom.classdeck.data.model.RankingModelList
 import com.classroom.classdeck.data.model.ResultModel
@@ -15,24 +16,24 @@ import kotlinx.coroutines.tasks.await
 import javax.inject.Inject
 
 
-class QuizResultRepository  @Inject constructor() {
+class QuizResultRepository @Inject constructor() {
 
 
     private val rootRef: FirebaseFirestore = FirebaseFirestore.getInstance()
-    private val quizRef: CollectionReference =
-        rootRef.collection(Constants.QUIZ).document("Contest").collection(getTodaysDate())
-    private val notificationsRef: CollectionReference = rootRef.collection(Constants.NOTIFICATIONS)
-    private val usersRef: CollectionReference = rootRef.collection(Constants.USERS)
-
+    private val courseRef: CollectionReference =
+        rootRef.collection(Constants.COURSE)
 
 
     val resultList = ArrayList<ResultModel?>()
-    suspend fun getQuizResult(contestId: String): MutableLiveData<ResponseState<List<ResultModel?>>> {
+    suspend fun getQuizResult(
+        contestId: String,
+        courseId: String
+    ): MutableLiveData<ResponseState<List<ResultModel?>>> {
         val updateUserLiveData: MutableLiveData<ResponseState<List<ResultModel?>>> =
             MutableLiveData()
 
         resultList.clear()
-        quizRef.document(contestId).collection(Constants.RESULTS)
+  courseRef.document(courseId).collection(Constants.QUIZ).document(contestId).collection(Constants.RESULTS)
             .orderBy("correct", Query.Direction.DESCENDING).get()
             .addOnCompleteListener { task ->
 
@@ -66,16 +67,17 @@ class QuizResultRepository  @Inject constructor() {
     }
 
 
-
     suspend fun addQuizRanking(
         id: String,
-        userList: ArrayList<RankingModel>
+        userList: ArrayList<RankingModel>,
+        course: Course
     ): MutableLiveData<ResponseState<Boolean>> {
         val updateUserLiveData: MutableLiveData<ResponseState<Boolean>> = MutableLiveData()
 
         val rankingModelList = RankingModelList()
-        rankingModelList.rankings= userList
-        quizRef.document(id).collection(Constants.RESULTS).document(Constants.RANKING).set(rankingModelList)
+        rankingModelList.rankings = userList
+        courseRef.document(course.courseCode).collection(Constants.QUIZ).document(id).collection(Constants.RESULTS).document(Constants.RANKING)
+            .set(rankingModelList)
             .addOnCompleteListener {
 
                 if (it.isSuccessful) {
@@ -86,9 +88,8 @@ class QuizResultRepository  @Inject constructor() {
                 }
 
             }.await()
-return updateUserLiveData
+        return updateUserLiveData
     }
-
 
 
 }

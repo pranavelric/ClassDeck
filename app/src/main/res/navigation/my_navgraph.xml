@@ -10,158 +10,158 @@
         android:id="@+id/splashFragment"
         android:name="com.classroom.classdeck.ui.splash.SplashFragment"
         android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" >
+        tools:layout="@layout/fragment_splash">
         <action
 
-
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"
-
-            app:popUpTo="@id/my_navgraph"
-            app:popUpToInclusive="true"
 
             android:id="@+id/action_splashFragment_to_selectTypeFragment"
-            app:destination="@id/selectTypeFragment" />
-        <action
-
+            app:destination="@id/selectTypeFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
+
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"
 
             app:popUpTo="@id/my_navgraph"
-            app:popUpToInclusive="true"
+            app:popUpToInclusive="true" />
+        <action
 
             android:id="@+id/action_splashFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+
+            app:popUpTo="@id/my_navgraph"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.classroom.classdeck.ui.login.login.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_login">
         <action
 
 
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
+
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"
 
             app:popUpTo="@id/my_navgraph"
-            app:popUpToInclusive="true"
-
-            android:id="@+id/action_loginFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:popUpToInclusive="true" />
         <action
 
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"
 
-            android:id="@+id/action_loginFragment_to_registrationFragment"
-            app:destination="@id/registrationFragment" />
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/selectTypeFragment"
         android:name="com.classroom.classdeck.ui.login.selectType.SelectTypeFragment"
         android:label="fragment_select_type"
-        tools:layout="@layout/fragment_select_type" >
+        tools:layout="@layout/fragment_select_type">
         <action
 
+            android:id="@+id/action_selectTypeFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
+
+
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"
-
-
-            android:id="@+id/action_selectTypeFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.classroom.classdeck.ui.home.HomeFragment"
         android:label="home_fragment"
-        tools:layout="@layout/home_fragment" >
+        tools:layout="@layout/home_fragment">
         <action
 
 
+            android:id="@+id/action_homeFragment_to_selectTypeFragment"
+            app:destination="@id/selectTypeFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
+
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"
 
             app:popUpTo="@id/my_navgraph"
-            app:popUpToInclusive="true"
-
-            android:id="@+id/action_homeFragment_to_selectTypeFragment"
-            app:destination="@id/selectTypeFragment" />
+            app:popUpToInclusive="true" />
         <action
-
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"
 
             android:id="@+id/action_homeFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
-        <action
-
+            app:destination="@id/profileFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
+
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
 
             android:id="@+id/action_homeFragment_to_settingsFragment"
-            app:destination="@id/settingsFragment" />
-        <action
-
+            app:destination="@id/settingsFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
+
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
 
             android:id="@+id/action_homeFragment_to_courseDetailFragment"
-            app:destination="@id/courseDetailFragment" />
-        <action
-
+            app:destination="@id/courseDetailFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"
 
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
 
             android:id="@+id/action_homeFragment_to_dashBoardFragment"
-            app:destination="@id/dashBoardFragment" />
+            app:destination="@id/dashBoardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+
+
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/registrationFragment"
         android:name="com.classroom.classdeck.ui.register.RegistrationFragment"
         android:label="registration_fragment"
-        tools:layout="@layout/registration_fragment" >
+        tools:layout="@layout/registration_fragment">
         <action
-
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"
 
             android:id="@+id/action_registrationFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <action
 
+            android:id="@+id/action_registrationFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"
-            app:popUpTo="@id/my_navgraph"
-            app:popUpToInclusive="true"
 
-            android:id="@+id/action_registrationFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:popUpTo="@id/my_navgraph"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -177,48 +177,48 @@
         android:id="@+id/courseDetailFragment"
         android:name="com.classroom.classdeck.ui.courseDetails.CourseDetailFragment"
         android:label="course_detail_fragment"
-        tools:layout="@layout/course_detail_fragment" >
+        tools:layout="@layout/course_detail_fragment">
         <action
-
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"
-
 
             android:id="@+id/action_courseDetailFragment_to_announcementsFragment"
-            app:destination="@id/announcementsFragment" />
-        <action
-
+            app:destination="@id/announcementsFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"
 
+
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
 
             android:id="@+id/action_courseDetailFragment_to_assignmentFragment"
-            app:destination="@id/assignmentFragment" />
-        <action
-
+            app:destination="@id/assignmentFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"
 
+
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
 
             android:id="@+id/action_courseDetailFragment_to_scheduleFragment"
-            app:destination="@id/scheduleFragment" />
-        <action
-
-
+            app:destination="@id/scheduleFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
+
+
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
 
 
             android:id="@+id/action_courseDetailFragment_to_quizFragment"
-            app:destination="@id/quizFragment" />
+            app:destination="@id/quizFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+
+
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/dashBoardFragment"
@@ -244,53 +244,130 @@
         android:id="@+id/quizFragment"
         android:name="com.classroom.classdeck.ui.courseDetails.tests.QuizFragment"
         android:label="quiz_fragment"
-        tools:layout="@layout/quiz_fragment" >
+        tools:layout="@layout/quiz_fragment">
         <action
 
 
+            android:id="@+id/action_quizFragment_to_createQuizFragment"
+            app:destination="@id/createQuizFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
+
+
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
 
 
-            android:id="@+id/action_quizFragment_to_createQuizFragment"
-            app:destination="@id/createQuizFragment" />
+            android:id="@+id/action_quizFragment_to_enterQuizFragment"
+            app:destination="@id/enterQuizFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+
+
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/createQuizFragment"
         android:name="com.classroom.classdeck.ui.courseDetails.tests.createTest.CreateQuizFragment"
         android:label="fragment_create_quiz"
-        tools:layout="@layout/fragment_create_quiz" >
+        tools:layout="@layout/fragment_create_quiz">
         <action
 
+            android:id="@+id/action_createQuizFragment_to_addQuestionsFragment"
+            app:destination="@id/addQuestionsFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
+
+
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"
-
-
-
-            android:id="@+id/action_createQuizFragment_to_addQuestionsFragment"
-            app:destination="@id/addQuestionsFragment" />
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/addQuestionsFragment"
         android:name="com.classroom.classdeck.ui.courseDetails.tests.createTest.createQuestions.AddQuestionsFragment"
         android:label="fragment_add_questions"
-        tools:layout="@layout/fragment_add_questions" >
+        tools:layout="@layout/fragment_add_questions">
         <action
 
 
-
+            android:id="@+id/action_addQuestionsFragment_to_quizFragment"
+            app:destination="@id/quizFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"
-            app:popUpTo="@id/my_navgraph"
-            app:popUpToInclusive="true"
 
-            android:id="@+id/action_addQuestionsFragment_to_quizFragment"
-            app:destination="@id/quizFragment" />
+            app:popUpTo="@id/my_navgraph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/enterQuizFragment"
+        android:name="com.classroom.classdeck.ui.courseDetails.tests.enterTest.EnterQuizFragment"
+        android:label="fragment_enter_quiz"
+        tools:layout="@layout/fragment_enter_quiz">
+        <action
+
+
+            android:id="@+id/action_enterQuizFragment_to_entryFragment"
+            app:destination="@id/entryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+
+
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/entryFragment"
+        android:name="com.classroom.classdeck.ui.courseDetails.tests.enterTest.entry.EntryFragment"
+        android:label="entry_fragment"
+        tools:layout="@layout/entry_fragment">
+        <action
+
+            android:id="@+id/action_entryFragment_to_startQuizFragment"
+            app:destination="@id/startQuizFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+
+
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/startQuizFragment"
+        android:name="com.classroom.classdeck.ui.courseDetails.tests.enterTest.start_quiz.StartQuizFragment"
+        android:label="start_quiz_fragment"
+        tools:layout="@layout/start_quiz_fragment">
+        <action
+
+
+            android:id="@+id/action_startQuizFragment_to_quizResultFragment"
+            app:destination="@id/quizResultFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+
+
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizResultFragment"
+        android:name="com.classroom.classdeck.ui.courseDetails.tests.enterTest.result.QuizResultFragment"
+        android:label="quiz_result_fragment"
+        tools:layout="@layout/quiz_result_fragment">
+        <action
+
+            android:id="@+id/action_quizResultFragment_to_quizFragment"
+            app:destination="@id/quizFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+
+
+            app:popUpTo="@id/my_navgraph"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>

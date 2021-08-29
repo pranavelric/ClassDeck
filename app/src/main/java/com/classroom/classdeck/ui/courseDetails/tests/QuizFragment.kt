@@ -40,7 +40,6 @@ class QuizFragment : Fragment() {
             user = (it.getSerializable(Constants.USERS_BUNDLE_OBJ) as User?)
         }
 
-
     }
 
     override fun onCreateView(
@@ -81,6 +80,41 @@ class QuizFragment : Fragment() {
             binding.createTestButton.gone()
 
         }
+
+
+        quizAdapter.setOnItemClickListener { quiz, pos ->
+
+            val bundle = Bundle().apply {
+                putSerializable(Constants.COURSE_BUNDLE_OBJ, course)
+                putSerializable(Constants.USERS_BUNDLE_OBJ, user)
+                putSerializable(Constants.QUIZ_BUNDLE_OBJ, quiz)
+
+            }
+
+            findNavController().navigate(
+                R.id.action_quizFragment_to_enterQuizFragment,
+                bundle
+            )
+
+        }
+
+        quizAdapter.setOnEntryBtnClickListener { quiz, pos ->
+
+            val bundle = Bundle().apply {
+                putSerializable(Constants.COURSE_BUNDLE_OBJ, course)
+                putSerializable(Constants.USERS_BUNDLE_OBJ, user)
+                putSerializable(Constants.QUIZ_BUNDLE_OBJ, quiz)
+
+            }
+
+            findNavController().navigate(
+                R.id.action_quizFragment_to_enterQuizFragment,
+                bundle
+            )
+
+
+        }
+
 
     }
 

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#39C6ECF3"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="1dp"
+    android:id="@+id/root_lay"
+
+    android:layout_marginEnd="1dp"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="32dp"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:background="#97FFC100">
+        <TextView
+            android:id="@+id/rank_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/primary_color"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            tools:text="1"/>
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            tools:text="Teacher"
+            android:textColor="@color/heading_text"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/user_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:textColor="@color/text_color"
+            android:textSize="12sp"
+            android:paddingEnd="10dp"
+            tools:text="temp@gmail.com"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/user_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/heading_text"
+            tools:text="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Points"
+            android:textSize="12sp"
+            android:textColor="@color/heading_text"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

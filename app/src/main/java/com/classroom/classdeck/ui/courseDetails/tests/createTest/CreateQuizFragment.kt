@@ -130,9 +130,12 @@ class CreateQuizFragment : Fragment() {
             hour = if (hour > 12) hour % 12 else hour
             val am_pm = if (hourOfDay < 12) "AM" else "PM"
 
-            var min = ""
-            if (minute.toString().length == 1) {
+            var min = "$minute"
+            if (minute.toString().length <= 1) {
                 min = "0" + minute
+            }
+            if (minute.toString().length == 1) {
+                min = "0" + min
             }
 
 
