@@ -35,15 +35,18 @@
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/entry_fragment.xml" value="0.2" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/event_item.xml" value="0.4" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_add_questions.xml" value="0.25416666666666665" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_all_courses.xml" value="0.21944444444444444" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_announcements.xml" value="0.1" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_assignment.xml" value="0.25416666666666665" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_create_quiz.xml" value="0.264" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_enter_quiz.xml" value="0.264" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_quiz_results.xml" value="0.25416666666666665" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_schedule.xml" value="0.136" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_select_type.xml" value="0.24010416666666667" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_settings.xml" value="0.1984375" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_splash.xml" value="0.25416666666666665" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/fragment_your_courses.xml" value="0.25416666666666665" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/home_fragment.xml" value="0.22395833333333334" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/join_class_dialog.xml" value="0.2212962962962963" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/layout_login.xml" value="0.25416666666666665" />
@@ -52,13 +55,14 @@
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/layout_register.xml" value="0.4" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/leaderboard_item.xml" value="0.25416666666666665" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/notif_item.xml" value="0.4" />
-        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/profile_card_lay.xml" value="0.264" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/profile_card_lay.xml" value="0.2" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/profile_fragment.xml" value="0.23854166666666668" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/qa_item.xml" value="0.25416666666666665" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/question_dialog.xml" value="0.264" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/quiz_fragment.xml" value="0.264" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/quiz_item.xml" value="0.4" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/quiz_result_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/quiz_result_item.xml" value="0.4" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/registration_fragment.xml" value="0.2" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/layout/start_quiz_fragment.xml" value="0.2" />
         <entry key="..\:/CodeRepo/Android/ClassDeck/app/src/main/res/menu/btm_bar_menu.xml" value="0.25416666666666665" />

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary_color"
-    tools:context=".ui.home.HomeFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.profile.allCourses.AllCoursesFragment">
+
+
+
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/primary_color"
-
-        >
+        android:background="@color/primary_color">
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/app_bar"
@@ -42,27 +42,15 @@
                     <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/expandedImage"
                         android:layout_width="match_parent"
-                        android:layout_height="200dp"
+                        android:layout_height="150dp"
                         android:alpha="0.8"
                         android:background="@color/primary_color_amoled"
-                        android:scaleType="centerCrop"
+                        android:scaleType="center"
+
                         android:src="@drawable/smiley_success"
                         app:layout_collapseParallaxMultiplier="0.7"
                         app:layout_constraintTop_toTopOf="parent"
                         app:shapeAppearanceOverlay="@style/roundedImageView" />
-
-
-                    <androidx.appcompat.widget.Toolbar
-                        android:id="@+id/toolbar"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_8sdp"
-                        android:gravity="center"
-                        android:theme="@style/ThemeOverlay.MaterialComponents.Dark"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_scrollFlags="enterAlways"
-                        app:menu="@menu/main_menu"
-                        app:title="" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -73,29 +61,79 @@
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/primary_color"
-
+            android:background="#0DDADADA"
             android:fillViewport="true"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:translationY="-100dp"
+            android:layout_marginBottom="-100dp"
 
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
 
             >
 
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-                >
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/announcement_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:clickable="true"
+                    android:elevation="@dimen/_4sdp"
+                    android:focusable="true"
+                    app:cardBackgroundColor="@color/primary_color"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:rippleColor="@color/primary_color">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/primary_color_amoled">
+
+
+                        <ImageView
+                            android:id="@+id/announcement_img_label"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_100sdp"
+                            android:src="@drawable/smiley_error"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/announcement_heading"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="All courses"
+                            android:textColor="@color/invertTextColor"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/announcement_img_label"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
 
                 <LinearLayout
                     android:id="@+id/empty_lay"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:visibility="gone"
-                   >
+                    android:visibility="gone">
 
 
                     <ImageView
@@ -111,29 +149,15 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="@dimen/_8sdp"
                         android:gravity="center"
-                        android:text="No class joined yet."
+                        android:text="No courses created yet."
                         android:textColor="@color/text_color"
                         android:textSize="24sp"
                         android:textStyle="bold" />
 
-                    <com.google.android.material.button.MaterialButton
-                        android:layout_width="match_parent"
-                        android:id="@+id/join_course_btn"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_20sdp"
-                        android:layout_marginEnd="@dimen/_20sdp"
-                        android:text="Join course"
-                        android:textColor="@color/invertTextColor"
-                        android:backgroundTint="@color/primary_color_amoled"
-                        app:cornerRadius="@dimen/_10sdp"
-android:layout_marginTop="@dimen/_10sdp"
-                        />
-
-
                 </LinearLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/course_rc"
+                    android:id="@+id/courses_rc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_14sdp"
@@ -143,40 +167,33 @@ android:layout_marginTop="@dimen/_10sdp"
                     tools:itemCount="3"
                     tools:listitem="@layout/course_card" />
 
-
             </LinearLayout>
 
 
         </androidx.core.widget.NestedScrollView>
 
 
-        <me.ibrahimsn.lib.SmoothBottomBar
-            android:id="@+id/bottomBar"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_gravity="bottom"
-            android:layout_margin="@dimen/_20sdp"
-            app:backgroundColor="@color/primary_color_amoled"
-            app:cornerRadius="@dimen/_20sdp"
-            app:iconTint="@color/invertTextColor"
-            app:menu="@menu/btm_bar_menu"
-
-            />
-
-
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:indeterminate="true"
-            android:indeterminateTint="@color/primary_color_amoled"
-            android:translationY="-80dp"
-            android:visibility="gone" />
-
-
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="@dimen/_36sdp"
+        android:elevation="@dimen/_16sdp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/primary_color_amoled"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

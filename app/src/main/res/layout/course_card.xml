@@ -14,11 +14,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#48D0DDFF"
-        android:padding="@dimen/_10sdp"
+
         android:minHeight="@dimen/_80sdp"
 
     >
 
+        <ImageView
+            android:layout_width="@dimen/_5sdp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@color/primary_color_amoled"
+            android:id="@+id/start_img"
+            />
 
 
 
@@ -30,7 +39,9 @@
                     android:layout_height="wrap_content"
                     android:text="Course code"
                     android:textSize="12sp"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/start_img"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
                     app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -45,7 +56,8 @@
                     android:textColor="@color/text_color"
                     android:textSize="26sp"
                     android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/start_img"
+              android:paddingStart="@dimen/_10sdp"
                     app:layout_constraintTop_toBottomOf="@id/course_code_label" />
 
 
@@ -81,6 +93,8 @@
                     android:layout_marginEnd="@dimen/_2sdp"
                     android:text="By: Proff Pranav "
                     android:textSize="10sp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
                     app:layout_constraintEnd_toStartOf="@id/joined_text"
                     app:layout_constraintBottom_toBottomOf="parent"
                     />

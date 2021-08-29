@@ -98,7 +98,7 @@
                             android:layout_height="0dp"
                             android:src="@drawable/reg"
                             android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="@id/quiz_title_text"
+                            app:layout_constraintBottom_toBottomOf="@id/quiz_title_text"
                             app:layout_constraintEnd_toStartOf="@id/entry_btn"
                             app:layout_constraintStart_toEndOf="@id/quiz_title_text"
                             app:layout_constraintTop_toTopOf="parent"
@@ -125,18 +125,15 @@
                             android:id="@+id/entry_btn"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:visibility="gone"
+                            android:backgroundTint="@color/primary_color_amoled"
                             android:text="Start"
                             android:textColor="@color/invertTextColor"
                             android:textSize="12sp"
-android:backgroundTint="@color/primary_color_amoled"
+                            android:visibility="gone"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
 
                             app:rippleColor="@color/primary_color" />
-
-
-
 
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -169,8 +166,6 @@ android:backgroundTint="@color/primary_color_amoled"
 
                             android:id="@+id/text_date"
                             android:layout_width="wrap_content"
-                            android:paddingStart="@dimen/_6sdp"
-                            android:paddingEnd="@dimen/_6sdp"
                             android:layout_height="25dp"
                             android:layout_gravity="center"
                             android:layout_marginStart="10dp"
@@ -178,6 +173,8 @@ android:backgroundTint="@color/primary_color_amoled"
                             android:background="@drawable/bg_rounded_gray_chip"
                             android:backgroundTint="@color/heading_text"
                             android:gravity="center"
+                            android:paddingStart="@dimen/_6sdp"
+                            android:paddingEnd="@dimen/_6sdp"
                             android:text="20.05.2020"
                             android:textColor="@color/invertTextColor"
                             android:textSize="12sp" />
@@ -216,32 +213,40 @@ android:backgroundTint="@color/primary_color_amoled"
                 </com.google.android.material.card.MaterialCardView>
 
 
+                <TextView
+                    android:id="@+id/heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Leaderboard"
+                    android:padding="@dimen/_6sdp"
+                    android:textSize="20sp"
+                    android:textColor="@color/heading_text"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintTop_toBottomOf="@id/util_card" />
 
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/leaderboard_rc"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:id="@+id/leaderboard_rc"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/util_card"
                     android:layout_marginTop="@dimen/_16sdp"
                     android:paddingStart="@dimen/_6sdp"
                     android:paddingEnd="@dimen/_6sdp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/heading"
                     tools:itemCount="3"
                     tools:listitem="@layout/leaderboard_item" />
 
                 <LinearLayout
+                    android:id="@+id/empty_lay"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
+                    android:background="@color/primary_color"
                     android:orientation="vertical"
                     android:visibility="gone"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/util_card"
-                    android:id="@+id/empty_lay"
-                    android:background="@color/primary_color"
-                    >
-
+                    app:layout_constraintTop_toBottomOf="@id/heading">
 
 
                     <ImageView
@@ -264,9 +269,6 @@ android:backgroundTint="@color/primary_color_amoled"
 
 
                 </LinearLayout>
-
-
-
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

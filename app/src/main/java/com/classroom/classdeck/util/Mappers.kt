@@ -23,6 +23,8 @@ object Mappers {
 
         cu.isStarted = contest.isStarted
 
+        cu.quizTitle = contest.quizTitle
+
 
         cu.courseCode = contest.courseCode
         cu.courseName = contest.CourseName
@@ -34,6 +36,7 @@ object Mappers {
 
         cu.wrong = 0
 
+        cu.marks = contest.marks ?: 0
 
         return cu
     }
@@ -54,6 +57,8 @@ object Mappers {
         cu.joined = contest.joined
 
 
+        cu.quizTitle = contest.quizTitle
+        cu.marks = contest.marks
         cu.question_numbers = contest.question_numbers
 
         cu.startTime = contest.startTime

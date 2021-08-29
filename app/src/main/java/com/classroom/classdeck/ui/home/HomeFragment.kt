@@ -226,6 +226,12 @@ class HomeFragment : Fragment() {
     private fun setMyClickListeners() {
 
 
+
+        binding.joinCourseBtn.setOnClickListener {
+            showJoinClassDialog()
+        }
+
+
         binding.bottomBar.onItemSelectedListener = object : OnItemSelectedListener {
 
             override fun onItemSelect(pos: Int): Boolean {
@@ -332,17 +338,7 @@ class HomeFragment : Fragment() {
                 return true
             }
 
-            R.id.action_notification -> {
-                val bundle = Bundle().apply {
-                    putSerializable(USERS_BUNDLE_OBJ, user)
-                }
 
-//                findNavController().navigate(
-//                    R.id.action_mainFragment_to_notificationsFragment,
-//                    bundle
-//                )
-                return true
-            }
 
             R.id.action_Settings->{
                 findNavController().navigate(R.id.action_homeFragment_to_settingsFragment)

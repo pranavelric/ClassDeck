@@ -61,6 +61,7 @@
             android:layout_height="match_parent"
             android:background="#0DDADADA"
             android:fillViewport="true"
+            android:layout_marginBottom="-100dp"
             android:translationY="-100dp"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
 
@@ -82,7 +83,7 @@
                     android:orientation="horizontal">
 
                     <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/game_record_card"
+                        android:id="@+id/your_courses_card"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/_100sdp"
                         android:layout_margin="@dimen/_10sdp"
@@ -117,7 +118,7 @@
                                 android:background="@color/primary_color_amoled"
                                 android:gravity="center"
                                 android:padding="@dimen/_5sdp"
-                                android:text="Game record"
+                                android:text="Your Courses"
                                 android:textColor="@color/invertTextColor"
                                 android:textSize="@dimen/_12sdp"
                                 android:textStyle="bold"
@@ -128,61 +129,10 @@
 
                     </com.google.android.material.card.MaterialCardView>
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/customer_care_card"
-                        android:layout_width="0dp"
-                        android:layout_height="@dimen/_100sdp"
-                        android:layout_margin="@dimen/_10sdp"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        android:focusable="true"
-                        app:cardBackgroundColor="@color/primary_color_amoled"
-                        app:cardCornerRadius="@dimen/_10sdp"
-                        app:rippleColor="@color/primary_color">
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-
-                            android:background="@color/primary_color_amoled">
-
-                            <ImageView
-                                android:id="@+id/customer_care_menu_img"
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/smiley_success"
-                                app:layout_constraintBottom_toTopOf="@id/customer_care_text"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <TextView
-                                android:id="@+id/customer_care_text"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@color/primary_color_amoled"
-                                android:gravity="center"
-                                android:padding="@dimen/_5sdp"
-                                android:text="Customer care"
-                                android:textColor="@color/invertTextColor"
-                                android:textSize="@dimen/_12sdp"
-                                android:textStyle="bold"
-                                app:layout_constraintBottom_toBottomOf="parent" />
-
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    </com.google.android.material.card.MaterialCardView>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
 
                     <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/transaction_record_card"
+                        android:id="@+id/all_courses_card"
                         android:layout_width="0dp"
                         android:layout_height="@dimen/_100sdp"
                         android:layout_margin="@dimen/_10sdp"
@@ -198,69 +148,23 @@
                             android:background="@color/primary_color_amoled">
 
                             <ImageView
-                                android:id="@+id/transaction_menu_img"
+                                android:id="@+id/all_courses_img"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:scaleType="fitCenter"
                                 android:src="@drawable/smiley_success"
-                                app:layout_constraintBottom_toTopOf="@id/transaction_record_text"
+                                app:layout_constraintBottom_toTopOf="@id/all_courses_text"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
                             <TextView
-                                android:id="@+id/transaction_record_text"
+                                android:id="@+id/all_courses_text"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@color/primary_color_amoled"
                                 android:gravity="center"
                                 android:padding="@dimen/_5sdp"
-                                android:text="Transaction record"
-                                android:textColor="@color/invertTextColor"
-                                android:textSize="@dimen/_12sdp"
-                                android:textStyle="bold"
-                                app:layout_constraintBottom_toBottomOf="parent" />
-
-
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    </com.google.android.material.card.MaterialCardView>
-
-
-                    <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/coins_store_card"
-                        android:layout_width="0dp"
-                        android:layout_height="@dimen/_100sdp"
-                        android:layout_margin="@dimen/_10sdp"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        android:focusable="true"
-                        app:cardCornerRadius="@dimen/_10sdp"
-                        app:rippleColor="@color/primary_color_amoled">
-
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@color/primary_color_amoled"
-                            >
-
-                            <ImageView
-                                android:id="@+id/deposit_menu_img"
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/smiley_success"
-                                app:layout_constraintBottom_toTopOf="@id/deposit_text"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
-
-                            <TextView
-                                android:id="@+id/deposit_text"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@color/primary_color_amoled"
-                                android:gravity="center"
-                                android:padding="@dimen/_5sdp"
-                                android:text="Coin Store"
+                                android:text="All Courses"
                                 android:textColor="@color/invertTextColor"
                                 android:textSize="@dimen/_12sdp"
                                 android:textStyle="bold"
@@ -274,6 +178,7 @@
 
 
                 </LinearLayout>
+
 
 
             </LinearLayout>

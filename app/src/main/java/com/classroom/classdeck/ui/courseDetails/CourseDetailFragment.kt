@@ -13,6 +13,9 @@ import com.classroom.classdeck.data.model.User
 import com.classroom.classdeck.databinding.CourseDetailFragmentBinding
 import com.classroom.classdeck.ui.home.HomeViewModel
 import com.classroom.classdeck.util.*
+import com.thecode.aestheticdialogs.DialogAnimation
+import com.thecode.aestheticdialogs.DialogStyle
+import com.thecode.aestheticdialogs.DialogType
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -84,6 +87,18 @@ class CourseDetailFragment : Fragment() {
     }
 
     private fun setMyClickListeners() {
+
+
+        binding.joinMeetingCard.setOnClickListener {
+            activity?.showCustomDialog(
+                "Coomig soon",
+                "This functionality will be added in future update",
+                true,
+                DialogStyle.EMOTION,
+                DialogType.WARNING,
+                DialogAnimation.SHRINK
+            )
+        }
 
         binding.courseAnnouncementCard.setOnClickListener {
             val bundle = Bundle().apply {

@@ -23,6 +23,9 @@ data class QuizUser(
     var courseCode:String= "",
     var courseName:String="",
 
+    var quizTitle:String = "",
+    var marks:Int= 0,
+
     ) : Serializable {
 
     constructor() : this("") {

@@ -13,6 +13,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.DiskCacheStrategy
@@ -61,6 +62,7 @@ class ProfileFragment : Fragment() {
         binding = ProfileFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -71,53 +73,29 @@ class ProfileFragment : Fragment() {
     }
 
     private fun setOnClicklistenr() {
-//        binding.topLay.root.setOnClickListener {
-//            val bundle = Bundle().apply {
-//                putSerializable(Constants.USERS_BUNDLE_OBJ, user)
-//            }
-//            findNavController().navigate(R.id.action_profileFragment2_to_profileFragment, bundle)
-//        }
-//        binding.updateProf.setOnClickListener {
-//            val bundle = Bundle().apply {
-//                putSerializable(Constants.USERS_BUNDLE_OBJ, user)
-//            }
-//            findNavController().navigate(R.id.action_profileFragment2_to_profileFragment, bundle)
-//        }
 
-        binding.gameRecordCard.setOnClickListener {
+        binding.yourCoursesCard.setOnClickListener {
             val bundle = Bundle().apply {
                 putSerializable(Constants.USERS_BUNDLE_OBJ, user)
             }
-          //  findNavController().navigate(R.id.action_profileFragment2_to_gameRecordEntryFragment, bundle)
+              findNavController().navigate(R.id.action_profileFragment_to_yourCoursesFragment, bundle)
         }
 
-        binding.customerCareCard.setOnClickListener {
+        binding.allCoursesCard.setOnClickListener {
 
-
-
-         //   findNavController().navigate(R.id.action_profileFragment2_to_customerCareFragment)
-
-        }
-
-        binding.coinsStoreCard.setOnClickListener {
             val bundle = Bundle().apply {
                 putSerializable(Constants.USERS_BUNDLE_OBJ, user)
             }
-            //findNavController().navigate(R.id.action_profileFragment2_to_coinsStoreFragment, bundle)
-        }
-        binding.transactionRecordCard.setOnClickListener {
-            val bundle = Bundle().apply {
-                putSerializable(Constants.USERS_BUNDLE_OBJ, user)
-            }
-         //   findNavController().navigate(R.id.action_profileFragment2_to_transactionRecordFragment, bundle)
-        }
+            findNavController().navigate(R.id.action_profileFragment_to_allCoursesFragment, bundle)
 
+        }
 
         binding.topLay.profilePic.setOnClickListener {
             selectImageFromGallery()
         }
-
-
+        binding.topLay.profileApplyCard.setOnClickListener {
+            selectImageFromGallery()
+        }
 
 
     }
@@ -158,10 +136,10 @@ class ProfileFragment : Fragment() {
         binding.topLay.userEmail.text = user?.email
         binding.topLay.userPhone.text = user?.phoneNumber
 
-        if(user?.isStudent==true)
-            binding.topLay.userRole.text= "Student"
+        if (user?.isStudent == true)
+            binding.topLay.userRole.text = "Student"
         else
-            binding.topLay.userRole.text= "Teacher"
+            binding.topLay.userRole.text = "Teacher"
 
 
     }
@@ -204,9 +182,6 @@ class ProfileFragment : Fragment() {
             .into(binding.topLay.profilePic)
 
     }
-
-
-
 
 
     private fun selectImageFromGallery() {
@@ -302,8 +277,6 @@ class ProfileFragment : Fragment() {
         dialog.show()
 
     }
-
-
 
 
 }

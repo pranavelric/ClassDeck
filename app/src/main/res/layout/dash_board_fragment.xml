@@ -114,10 +114,25 @@ android:background="@color/primary_color"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/event_rc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:clipToPadding="false"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/event_item" />
+
+
                 <HorizontalScrollView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:scrollbars="none">
+                    android:scrollbars="none"
+                    android:visibility="gone"
+                    android:id="@+id/events_cards"
+                    >
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -150,7 +165,7 @@ android:background="@color/primary_color"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
 
-                                    android:text="Puspita Kartika Sari, M. Si"
+                                    android:text="This is sample data"
                                     android:textColor="@color/text_color" />
 
                                 <View
@@ -189,7 +204,7 @@ android:background="@color/primary_color"
                                             android:drawablePadding="8dp"
 
                                             android:gravity="center"
-                                            android:text="12 Jul 2019" />
+                                            android:text="29 Aug 2021" />
                                     </LinearLayout>
 
                                     <LinearLayout
@@ -250,7 +265,7 @@ android:background="@color/primary_color"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
 
-                                    android:text="Puspita Kartika Sari, M. Si"
+                                    android:text="This is sample data"
                                     android:textColor="@color/text_color" />
 
                                 <View
@@ -289,7 +304,7 @@ android:background="@color/primary_color"
                                             android:drawablePadding="8dp"
 
                                             android:gravity="center"
-                                            android:text="12 Jul 2019" />
+                                            android:text="29 Aug 2021" />
                                     </LinearLayout>
 
                                     <LinearLayout
@@ -324,105 +339,6 @@ android:background="@color/primary_color"
 
                         </com.google.android.material.card.MaterialCardView>
 
-                        <com.google.android.material.card.MaterialCardView
-                            android:layout_width="280dp"
-                            android:layout_height="wrap_content"
-                            app:cardCornerRadius="4dp"
-                            app:cardElevation="4dp"
-                            app:cardUseCompatPadding="true"
-                            app:contentPadding="8dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="4dp"
-
-                                    android:text="Information System Evaluation"
-                                    android:textColor="@color/md_blue_grey_500"
-                                    android:textSize="16sp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-
-                                    android:text="Puspita Kartika Sari, M. Si"
-                                    android:textColor="@color/text_color" />
-
-                                <View
-                                    android:layout_width="match_parent"
-                                    android:layout_height="1dp"
-                                    android:layout_marginTop="8dp"
-                                    android:layout_marginBottom="8dp"
-                                    android:background="#80D1D1D1" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="100"
-                                    android:orientation="horizontal">
-
-                                    <LinearLayout
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="50"
-                                        android:orientation="vertical">
-
-                                        <TextView
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginBottom="4dp"
-                                            android:drawableLeft="@drawable/ic_access_time_red_24dp"
-                                            android:drawablePadding="8dp"
-
-                                            android:gravity="center"
-                                            android:text="08:00 - 10:00" />
-
-                                        <TextView
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:drawableLeft="@drawable/ic_event_available_red_24dp"
-                                            android:drawablePadding="8dp"
-
-                                            android:gravity="center"
-                                            android:text="12 Jul 2019" />
-                                    </LinearLayout>
-
-                                    <LinearLayout
-                                        android:layout_width="0dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="50"
-                                        android:orientation="vertical">
-
-                                        <TextView
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginBottom="4dp"
-                                            android:drawableLeft="@drawable/ic_location_on_red_24dp"
-                                            android:drawablePadding="8dp"
-
-                                            android:gravity="center"
-                                            android:text="M305" />
-
-                                        <TextView
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:drawableLeft="@drawable/ic_person_outline_red_24dp"
-                                            android:drawablePadding="8dp"
-                                            android:text="Lecturer available"
-                                            android:textSize="12sp" />
-
-                                    </LinearLayout>
-
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                        </com.google.android.material.card.MaterialCardView>
 
 
                     </LinearLayout>
@@ -451,6 +367,7 @@ android:background="@color/primary_color"
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/course_view_all"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="50"
@@ -462,11 +379,26 @@ android:background="@color/primary_color"
 
                 </LinearLayout>
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/cources_rc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:clipToPadding="false"
+
+                    tools:itemCount="3"
+                    tools:listitem="@layout/course_card" />
+
+
+
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="4dp"
+                    android:id="@+id/course_cards"
                     app:cardElevation="4dp"
+                    android:visibility="gone"
                     app:cardUseCompatPadding="true"
                     app:contentPadding="16dp">
 
@@ -496,7 +428,7 @@ android:background="@color/primary_color"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="4dp"
 
-                                android:text="UX Design - From Wireframe to Prototype logo UX Design"
+                                android:text="UX Design - This is sample data"
                                 android:textColor="@color/text_color"
                                 android:textSize="16sp" />
 
@@ -504,7 +436,7 @@ android:background="@color/primary_color"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
 
-                                android:text="Sam Smith"
+                                android:text="Pranav Choudhary"
                                 android:textSize="14sp" />
                         </LinearLayout>
 
@@ -537,7 +469,7 @@ android:background="@color/primary_color"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="50"
-
+android:id="@+id/announcement_view_all"
                         android:text="View all"
                         android:textAlignment="textEnd"
                         android:textColor="@color/red"
@@ -545,13 +477,30 @@ android:background="@color/primary_color"
 
                 </LinearLayout>
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/announcement_rc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:clipToPadding="false"
+
+                    tools:itemCount="3"
+                    tools:listitem="@layout/notif_item" />
+
+
+
+
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="4dp"
+                    android:id="@+id/announce_cards"
                     app:cardElevation="4dp"
                     app:cardUseCompatPadding="true"
-                    app:contentPadding="16dp">
+                    app:contentPadding="16dp"
+                    android:visibility="gone"
+                    >
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -567,7 +516,7 @@ android:background="@color/primary_color"
                             android:paddingTop="8dp"
                             android:paddingRight="12dp"
                             android:paddingBottom="8dp"
-                            android:text="EXAMS"
+                            android:text="EXAM"
                             android:textColor="@color/invertTextColor"
                             android:textSize="14sp" />
 
@@ -577,7 +526,7 @@ android:background="@color/primary_color"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="4dp"
 
-                            android:text="Update on CS8214 - Postponed to next week due to unforeseen circumstances."
+                            android:text="Update on CS101 - Postponed to next week due to unforeseen circumstances."
                             android:textColor="@color/text_color"
                             android:textSize="16sp" />
 
@@ -592,6 +541,116 @@ android:background="@color/primary_color"
 
 
                 </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+
+                        android:text="Assignments"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/heading_text"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:id="@+id/assign_view_all"
+                        android:text="View all"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/red"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/assign_rc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:clipToPadding="false"
+
+                    tools:itemCount="3"
+                    tools:listitem="@layout/notif_item" />
+
+
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="4dp"
+                    android:id="@+id/assign_cards"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="16dp"
+                    android:visibility="gone"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/blue_rounded_solid"
+                            android:paddingLeft="12dp"
+                            android:paddingTop="8dp"
+                            android:paddingRight="12dp"
+                            android:paddingBottom="8dp"
+                            android:text="Assignment"
+                            android:textColor="@color/invertTextColor"
+                            android:textSize="14sp" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+
+                            android:text="Create an Android app for video chat"
+                            android:textColor="@color/text_color"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="10:40 AM"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+
+
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -610,6 +669,7 @@ android:background="@color/primary_color"
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/categories_card"
                     app:cardUseCompatPadding="true"
                     app:contentPadding="16dp">
 
@@ -830,6 +890,23 @@ android:background="@color/primary_color"
 
 
         </androidx.core.widget.NestedScrollView>
+
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/black"
+android:layout_gravity="center"
+            android:visibility="gone"
+            android:translationY="30dp"
+            app:layout_constraintTop_toBottomOf="@id/layout_register"
+            app:layout_constraintBottom_toTopOf="@id/wave_down"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
 
 
