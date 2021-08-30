@@ -227,8 +227,20 @@ class HomeFragment : Fragment() {
 
 
 
-        binding.joinCourseBtn.setOnClickListener {
+        if(user?.isStudent==true){
+            binding.emptyError.text = "No classes joinded yet."
+        binding.joinCourseBtn.text = "Join course"
+            binding.joinCourseBtn.setOnClickListener {
             showJoinClassDialog()
+        }
+
+        }else{
+            binding.emptyError.text = "No classes created by you yet."
+            binding.joinCourseBtn.text = "Create course"
+            binding.joinCourseBtn.setOnClickListener {
+                showAddClassDialog()
+            }
+
         }
 
 

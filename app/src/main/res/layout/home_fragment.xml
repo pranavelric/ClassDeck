@@ -85,16 +85,26 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:orientation="vertical">
 
-                >
+                <TextView
+                    style="@style/headerText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Your courses"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/heading_text"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:padding="@dimen/_8sdp"
+                    />
 
                 <LinearLayout
                     android:id="@+id/empty_lay"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:visibility="gone">
+                  >
 
 
                     <ImageView
@@ -117,7 +127,8 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/join_course_btn"
-                        android:layout_width="match_parent"
+                        android:layout_width="@dimen/_200sdp"
+                        android:layout_gravity="center"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_20sdp"
                         android:layout_marginTop="@dimen/_10sdp"
