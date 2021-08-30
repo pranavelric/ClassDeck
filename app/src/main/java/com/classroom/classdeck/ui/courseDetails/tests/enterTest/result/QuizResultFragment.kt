@@ -133,8 +133,8 @@ class QuizResultFragment : Fragment() {
                                 RankingModel(
                                     list[i]?.userId,
                                     list[i]?.userPhoneNumber,
-                                    user?.name,
-                                    user?.email,
+                                    list[i]?.userName,
+                                    list[i]?.userEmail,
                                     i,
                                     list[i]?.correct
                                 )
