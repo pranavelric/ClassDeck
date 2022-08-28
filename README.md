@@ -1,5 +1,5 @@
 # ClassDeck
-CladdDeck app was made for Mobile Application Development task submission in Flipr Hackathon X.
+ClassDeck app was made for Mobile Application Development task submission in Flipr Hackathon X.
 
 
 Features:
